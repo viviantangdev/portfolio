@@ -48,7 +48,7 @@ a {
 }
 
 .navbar.active > ul {
-  @apply opacity-100 scale-100 blur-0 visible;
+  @apply opacity-100 scale-100 blur-0 visible mr-10;
 }
 
 .nav-link {
