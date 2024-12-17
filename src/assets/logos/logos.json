@@ -1,0 +1,9 @@
+[
+  { "src": "react.svg", "alt": "React logo" },
+  { "src": "flutter.svg", "alt": "Flutter logo" },
+  { "src": "css.svg", "alt": "CSS logo" },
+  { "src": "dart.svg", "alt": "Dart logo" },
+  { "src": "git.svg", "alt": "Git logo" },
+  { "src": "html.svg", "alt": "HTML logo" },
+  { "src": "tailwind.svg", "alt": "Tailwind logo" }
+]
