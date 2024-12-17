@@ -60,7 +60,7 @@ a {
 }
 
 section {
-  @apply flex flex-col items-center justify-center p-12 h-[50vh];
+  @apply flex flex-col items-center justify-center p-12 h-[70vh];
 }
 
 .socailMedia > ul {

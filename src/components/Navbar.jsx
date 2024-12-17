@@ -41,7 +41,7 @@ const Navbar = ({ navOpen }) => {
       },
       {
         root: null, // Uses the viewport as the container
-        threshold: 0.7, // 60% of the section should be visible to trigger
+        threshold: 0.5, // 60% of the section should be visible to trigger
       }
     );
 

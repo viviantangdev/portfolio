@@ -82,7 +82,7 @@ const Contact = () => {
                 type='text'
                 name='name'
                 placeholder='Enter your name here'
-                className='rounded-lg p-2'
+                className='rounded-lg p-2 text-slate-950 border '
               />
             </div>
             <div className='flex flex-col w-full'>
@@ -94,7 +94,7 @@ const Contact = () => {
                 type='email'
                 name='email'
                 placeholder='Enter your email here'
-                className='rounded-lg p-2'
+                className='rounded-lg p-2 text-slate-950'
               />
             </div>
           </div>
@@ -107,7 +107,7 @@ const Contact = () => {
               required
               name='message'
               placeholder='Enter your message here'
-              className='rounded-lg p-2 min-h-40'
+              className='rounded-lg p-2 min-h-40  text-slate-950'
             ></textarea>
           </div>
           <button type='submit' className=''>
