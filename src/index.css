@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@theme {
+  --animate-fade-up: fade-up 0.9s ease-in forwards;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* Custom Reset & Layout Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply m-0 p-0  text-white text-base;
+  font-family: 'Lato', sans-serif;
+  background-color: #161a2b; /* darker base */
+  background-image: radial-gradient(at 91% 3%, #1a1f3a 0%, transparent 60%),
+    radial-gradient(at 64% 16%, #303656 0%, transparent 50%),
+    radial-gradient(at 70% 24%, #5a4e73 0%, transparent 40%),
+    radial-gradient(at 97% 42%, #b78bb4 0%, transparent 25%);
+}
+
+/* Utility / Custom Classes */
+.text-shadow {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Styles */
+p {
+  @apply text-lg font-light;
+  letter-spacing: 0.85px;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  word-spacing: 5px;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  @apply text-3xl font-thin;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  @apply text-xl font-light mt-4;
+}
