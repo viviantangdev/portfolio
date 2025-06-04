@@ -7,13 +7,31 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Weather App',
-      description: 'Real-time weather data using the OpenWeatherMap API.',
-      tecStack: ['React', 'Tailwind CSS', 'API'],
-      liveUrl: 'https://your-live-demo-link.com',
-      githubUrl: 'https://github.com/yourusername/weather-app',
+      title: 'Portfolio Website',
+      description: 'My personal website showcasing projects and skills.',
+      tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+      liveUrl: 'https://your-portfolio-link.com',
+      githubUrl: 'https://github.com/yourusername/portfolio-site',
       imageUrl: testImage,
-      imageAlt: 'Screenshot of the Weather App',
+      imageAlt: 'Screenshot of Portfolio Website',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'My personal website showcasing projects and skills.',
+      tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+      liveUrl: 'https://your-portfolio-link.com',
+      githubUrl: 'https://github.com/yourusername/portfolio-site',
+      imageUrl: testImage,
+      imageAlt: 'Screenshot of Portfolio Website',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'My personal website showcasing projects and skills.',
+      tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+      liveUrl: 'https://your-portfolio-link.com',
+      githubUrl: 'https://github.com/yourusername/portfolio-site',
+      imageUrl: testImage,
+      imageAlt: 'Screenshot of Portfolio Website',
     },
     {
       title: 'Portfolio Website',
@@ -82,7 +100,7 @@ const Projects = () => {
             className={`transition-all duration-700 transform ${
               isInView
                 ? `animate-fade-up [animation-delay:${
-                    0.3 + index * 0.2
+                    0.8 + index * 0.2
                   }s] opacity-100`
                 : 'opacity-0'
             }`}

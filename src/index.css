@@ -33,13 +33,18 @@
 }
 
 body {
-  @apply m-0 p-0  text-white text-base;
+  @apply m-0 p-0 text-white text-base;
   font-family: 'Lato', sans-serif;
-  background-color: #161a2b; /* darker base */
-  background-image: radial-gradient(at 91% 3%, #1a1f3a 0%, transparent 60%),
-    radial-gradient(at 64% 16%, #303656 0%, transparent 50%),
-    radial-gradient(at 70% 24%, #5a4e73 0%, transparent 40%),
-    radial-gradient(at 97% 42%, #b78bb4 0%, transparent 25%);
+
+  background-color: #070d13;
+
+  background-image:
+    radial-gradient(at 90% 5%, rgba(96, 165, 250, 0.08) 0%, transparent 80%),     /* blue-400 */
+    radial-gradient(at 20% 10%, rgba(147, 197, 253, 0.06) 0%, transparent 75%),   /* blue-300 */
+    radial-gradient(at 75% 60%, rgba(125, 211, 252, 0.05) 0%, transparent 70%),   /* sky-300 */
+    radial-gradient(at 30% 85%, rgba(96, 165, 250, 0.07) 0%, transparent 65%),    /* blue-400 */
+    radial-gradient(at 50% 50%, rgba(147, 197, 253, 0.04) 0%, transparent 90%),   /* blue-300 */
+    radial-gradient(at 85% 90%, rgba(191, 219, 254, 0.05) 0%, transparent 60%);   /* blue-200 */
 }
 
 /* Utility / Custom Classes */
