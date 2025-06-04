@@ -14,7 +14,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <article
-      className={`bg-[#22273f] border border-[#3b3f62] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out text-white flex flex-col ${className}`}
+  className={`min-h-[300px] bg-[#22273f] border border-[#3b3f62] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out text-white flex flex-col ${className}`}
     >
       <img
         src={imageUrl}

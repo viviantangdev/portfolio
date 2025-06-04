@@ -1,6 +1,6 @@
+import testImage from '../assets/test_image.jpg';
 import { ProjectCard } from '../components/ProjectCard';
 import { useInView } from '../hooks/useInView';
-import testImage from '../assets/test_image.jpg';
 
 const Projects = () => {
   const [ref, isInView] = useInView();
@@ -14,6 +14,15 @@ const Projects = () => {
       githubUrl: 'https://github.com/yourusername/weather-app',
       imageUrl: testImage,
       imageAlt: 'Screenshot of the Weather App',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'My personal website showcasing projects and skills.',
+      tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+      liveUrl: 'https://your-portfolio-link.com',
+      githubUrl: 'https://github.com/yourusername/portfolio-site',
+      imageUrl: testImage,
+      imageAlt: 'Screenshot of Portfolio Website',
     },
     {
       title: 'Portfolio Website',
@@ -53,7 +62,13 @@ const Projects = () => {
         and user-friendly interfaces using modern frontend technologies like
         React, Tailwind CSS, and more.
       </p>
-      <div className='grid gap-6 md:grid-cols-2'>
+      <div
+        className={`grid gap-6 grid-cols-1 md:grid-cols-2 transition-all duration-700 transform ${
+          isInView
+            ? 'animate-fade-up [animation-delay:0.9s] opacity-100'
+            : 'opacity-0'
+        }`}
+      >
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -64,9 +79,13 @@ const Projects = () => {
             githubUrl={project.githubUrl}
             imageUrl={project.imageUrl}
             imageAlt={project.imageAlt}
-            className= {isInView
-            ? 'animate-fade-up [animation-delay:0.8s] opacity-100'
-            : 'opacity-0'}
+            className={`transition-all duration-700 transform ${
+              isInView
+                ? `animate-fade-up [animation-delay:${
+                    0.3 + index * 0.2
+                  }s] opacity-100`
+                : 'opacity-0'
+            }`}
           />
         ))}
       </div>
