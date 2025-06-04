@@ -61,7 +61,7 @@ const Projects = () => {
       }`}
     >
       <h2
-        className={`text-shadow transition-all duration-700 transform ${
+        className={` text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x text-shadow text-shadow transition-all duration-700 transform ${
           isInView
             ? 'animate-fade-in [animation-delay:0.1s] opacity-100'
             : 'opacity-0'

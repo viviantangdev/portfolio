@@ -15,7 +15,7 @@ export const ProjectCard = ({
   return (
     <article
       className={`min-h-[300px] bg-[#1a2233]/80
-backdrop-blur-md border border-[#2b2f4a] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out text-white flex flex-col ${className}`}
+backdrop-blur-md border border-[#2b2f4a] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out  flex flex-col ${className}`}
     >
       <img
         src={imageUrl}
@@ -28,7 +28,7 @@ backdrop-blur-md border border-[#2b2f4a] rounded-lg overflow-hidden shadow-lg ho
           {title}
         </h3>
 
-        <p className='text-sm text-gray-300 flex-grow'>{description}</p>
+        <p className='text-sm flex-grow'>{description}</p>
 
         <div className='flex flex-wrap gap-2 mt-4'>
           {tecStack.map((tech, index) => (

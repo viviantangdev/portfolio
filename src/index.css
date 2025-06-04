@@ -33,7 +33,7 @@
 }
 
 body {
-  @apply m-0 p-0 text-white text-base;
+  @apply m-0 p-0 text-slate-100 text-base;
   font-family: 'Lato', sans-serif;
 
   background-color: #070d13;
@@ -60,8 +60,9 @@ p {
 
 h1,
 h2 {
+  @apply tracking-wider ;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
   word-spacing: 5px;
   margin: 0;
 }
@@ -73,5 +74,5 @@ h1 {
 
 h2 {
   font-family: 'Lato', sans-serif;
-  @apply text-xl font-light mt-4;
+  @apply text-2xl font-extrabold mt-4;
 }
