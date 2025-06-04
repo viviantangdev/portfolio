@@ -17,7 +17,7 @@ const Home = () => {
         I´m a frontend developer with experiences in creating websites, apps and
         UX/UI.
       </p>
-      <div className='flex flex-wrap gap-2 mb-10'>
+      <div className='flex justify-center flex-wrap gap-2 mb-10'>
         <Tag label='React' />
         <Tag label='Javascript' />
         <Tag label='Flutter' />
