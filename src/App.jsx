@@ -8,6 +8,7 @@ import { useThemeMode } from './hooks/useThemeMode';
 import About from './pages/About';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import { LogoTitle } from './components/LogoTitle';
 
 function App() {
   const [isDark, setIsDark] = useThemeMode(true);
@@ -28,6 +29,7 @@ function App() {
       <header className='fixed top-0 left-0 w-full z-50 px-6 py-3 bg-[var(--card-bg)] backdrop-blur-md shadow-md border-b border-[var(--card-border)]'>
         {/* Desktop header */}
         <div className='hidden md:flex justify-between items-center'>
+          <LogoTitle/>
           <div className='flex-1'>
             <NavMenu active={activeSection} />
           </div>
@@ -39,7 +41,8 @@ function App() {
 
         {/* Mobile header */}
         <div className='flex items-center justify-between md:hidden'>
-          <span className='text-lg font-bold'>My Site</span>
+          {/* <span className='text-lg font-bold'>My Site</span> */}
+          <LogoTitle/>
           <button
             ref={toggleButtonRef}
             onClick={() => setMenuOpen((prev) => !prev)}

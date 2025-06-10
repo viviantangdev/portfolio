@@ -23,7 +23,6 @@
       transform: scale(1);
     }
   }
-
 }
 
 /* Light theme */
@@ -63,8 +62,7 @@
 /* Custom Reset & Layout Styles */
 * {
   box-sizing: border-box;
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,19 +73,6 @@ body {
   background-image: var(--tw-radial);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-image: radial-gradient(
-      at 90% 5%,
-      rgba(96, 165, 250, 0.12) 0%,
-      transparent 80%
-    ),
-    radial-gradient(at 20% 10%, rgba(147, 197, 253, 0.1) 0%, transparent 75%),
-    radial-gradient(at 75% 60%, rgba(125, 211, 252, 0.08) 0%, transparent 70%),
-    radial-gradient(at 30% 85%, rgba(96, 165, 250, 0.1) 0%, transparent 65%),
-    radial-gradient(at 50% 50%, rgba(147, 197, 253, 0.06) 0%, transparent 90%),
-    radial-gradient(at 85% 90%, rgba(191, 219, 254, 0.08) 0%, transparent 60%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; */
 }
 /* Utility / Custom Classes */
 .text-shadow {
