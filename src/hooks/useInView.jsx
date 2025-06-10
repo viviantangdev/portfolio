@@ -5,6 +5,9 @@ export const useInView = (options = {}) => {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
+    const node = ref.current; // Store ref.current as an local variable
+    if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,12 +17,10 @@ export const useInView = (options = {}) => {
       { threshold: 0.2, ...options }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(node);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      observer.unobserve(node); 
     };
   }, [options]);
 

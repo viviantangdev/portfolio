@@ -1,27 +1,29 @@
-import testImage from '../assets/test_image.jpg';
-import { ProjectCard } from '../components/ProjectCard';
+import { Tag } from '../components/Tag';
 import { useInView } from '../hooks/useInView';
+import {
+  DartIcon,
+  FlutterIcon,
+  JavaScriptIcon,
+  ReactIcon,
+} from '../components/SvgIcon';
 
-const Projects = () => {
+const About = () => {
   const [ref, isInView] = useInView();
 
-  const projects = [
+  const tecStack = [
     {
-      title: 'Portfolio Website',
-      description: 'My personal website showcasing projects and skills.',
-      tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
-      // tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
-      liveUrl: 'https://your-portfolio-link.com',
-      githubUrl: 'https://github.com/yourusername/portfolio-site',
-      imageUrl: testImage,
-      imageAlt: 'Screenshot of Portfolio Website',
+      icon: <DartIcon/>,
+      text: 'Dart',
     },
-   
+    {
+      icon: <FlutterIcon />,
+      text: 'Flutter',
+    },
   ];
 
   return (
     <section
-    id='projects'
+    id='about'
       ref={ref}
       className={`flex flex-col justify-start mx-5 space-y-5 text-center lg:items-start lg:text-left lg:mx-auto lg:max-w-4xl transition-opacity duration-700 ${
         isInView ? 'opacity-100' : 'opacity-0'
@@ -34,7 +36,7 @@ const Projects = () => {
             : 'opacity-0'
         }`}
       >
-        Projects
+        About me
       </h2>
       <p
         className={`text-shadow mt-10 transition-all duration-700 delay-500 transform ${
@@ -43,23 +45,16 @@ const Projects = () => {
             : 'opacity-0'
         }`}
       >
-        These projects demonstrate my ability to build responsive, accessible,
-        and user-friendly interfaces using modern frontend technologies like
-        React, Tailwind CSS, and more.
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, fugit quaerat maiores aperiam laborum culpa facere amet architecto, dolorem praesentium nihil reprehenderit soluta corporis. Adipisci quidem error eveniet mollitia ad?
       </p>
       <div
-        className={`grid gap-6 grid-cols-1 md:grid-cols-2 transition-all duration-700 transform `}
+        className={`grid gap-6 grid-cols-4 transition-all duration-700 transform `}
       >
-        {projects.map((project, index) => (
-          <ProjectCard
+        {tecStack.map((stack, index) => (
+          <Tag
             key={index}
-            title={project.title}
-            description={project.description}
-            tecStack={project.tecStack}
-            liveUrl={project.liveUrl}
-            githubUrl={project.githubUrl}
-            imageUrl={project.imageUrl}
-            imageAlt={project.imageAlt}
+            content={stack.icon}
+            hoverContent={stack.text}
             className={`transition-all duration-700 transform ${
               isInView
                 ? `animate-fade-up [animation-delay:${
@@ -74,4 +69,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default About;

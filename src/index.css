@@ -2,7 +2,6 @@
 
 @theme {
   --animate-fade-up: fade-up 0.9s ease-in forwards;
-
   @keyframes fade-up {
     0% {
       opacity: 0;
@@ -14,7 +13,6 @@
     }
   }
   --animate-fade-in: fade-in 0.5s ease-out forwards;
-
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -25,28 +23,72 @@
       transform: scale(1);
     }
   }
+
+}
+
+/* Light theme */
+:root {
+  --tw-bg: #ffffff;
+  --tw-text: #0d0d0d;
+  --tw-accent: #38bdf8;
+  --tw-accent-text: #0f172a;
+  --tw-radial: radial-gradient(
+    at 0% 0%,
+    rgba(14, 165, 233, 0.15) 0%,
+    transparent 60%
+  );
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: #d1d5db;
+  --card-title: #0ea5e9; /* cyan-500 */
+  --card-text: #1f2937; /* slate-800 */
+}
+
+/* Dark theme */
+.dark {
+  --tw-bg: #121212;
+  --tw-text: #f1f5f9;
+  --tw-accent: #22d3ee;
+  --tw-accent-text: #f8fafc;
+  --tw-radial: radial-gradient(
+    at 0% 0%,
+    rgba(96, 165, 250, 0.1) 0%,
+    transparent 60%
+  );
+  --card-bg: rgba(26, 34, 51, 0.8);
+  --card-border: #2b2f4a;
+  --card-title: #67e8f9; /* cyan-300 */
+  --card-text: #e2e8f0; /* slate-200 */
 }
 
 /* Custom Reset & Layout Styles */
 * {
   box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 body {
-  @apply m-0 p-0 text-slate-100 text-base;
+  @apply m-0 p-0 text-base max-w-screen transition-all;
   font-family: 'Lato', sans-serif;
-
-  background-color: #070d13;
-
-  background-image:
-    radial-gradient(at 90% 5%, rgba(96, 165, 250, 0.08) 0%, transparent 80%),     /* blue-400 */
-    radial-gradient(at 20% 10%, rgba(147, 197, 253, 0.06) 0%, transparent 75%),   /* blue-300 */
-    radial-gradient(at 75% 60%, rgba(125, 211, 252, 0.05) 0%, transparent 70%),   /* sky-300 */
-    radial-gradient(at 30% 85%, rgba(96, 165, 250, 0.07) 0%, transparent 65%),    /* blue-400 */
-    radial-gradient(at 50% 50%, rgba(147, 197, 253, 0.04) 0%, transparent 90%),   /* blue-300 */
-    radial-gradient(at 85% 90%, rgba(191, 219, 254, 0.05) 0%, transparent 60%);   /* blue-200 */
+  color: var(--tw-text);
+  background-color: var(--tw-bg);
+  background-image: var(--tw-radial);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: radial-gradient(
+      at 90% 5%,
+      rgba(96, 165, 250, 0.12) 0%,
+      transparent 80%
+    ),
+    radial-gradient(at 20% 10%, rgba(147, 197, 253, 0.1) 0%, transparent 75%),
+    radial-gradient(at 75% 60%, rgba(125, 211, 252, 0.08) 0%, transparent 70%),
+    radial-gradient(at 30% 85%, rgba(96, 165, 250, 0.1) 0%, transparent 65%),
+    radial-gradient(at 50% 50%, rgba(147, 197, 253, 0.06) 0%, transparent 90%),
+    radial-gradient(at 85% 90%, rgba(191, 219, 254, 0.08) 0%, transparent 60%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
 }
-
 /* Utility / Custom Classes */
 .text-shadow {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -60,7 +102,7 @@ p {
 
 h1,
 h2 {
-  @apply tracking-wider ;
+  @apply tracking-wider;
   text-transform: uppercase;
   letter-spacing: 5px;
   word-spacing: 5px;
@@ -75,4 +117,27 @@ h1 {
 h2 {
   font-family: 'Lato', sans-serif;
   @apply text-2xl font-extrabold mt-4;
+}
+
+section {
+  min-height: 100vh;
+  scroll-margin-top: 80px; /* adjust to match your nav height */
+}
+
+/* Glassmorphic card utility */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--card-text);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.glass-card-hover:hover {
+  border-color: var(--tw-accent);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+  transition: all 0.3s ease;
 }
