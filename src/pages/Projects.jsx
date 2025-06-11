@@ -1,9 +1,7 @@
 import testImage from '../assets/test_image.jpg';
 import { ProjectCard } from '../components/ProjectCard';
-import { useInView } from '../hooks/useInView';
 
 const Projects = () => {
-  const [ref, isInView] = useInView();
 
   const projects = [
     {
@@ -22,26 +20,15 @@ const Projects = () => {
   return (
     <section
     id='projects'
-      ref={ref}
-      className={`flex flex-col justify-start mx-5 space-y-5 text-center lg:items-start lg:text-left lg:mx-auto lg:max-w-4xl transition-opacity duration-700 ${
-        isInView ? 'opacity-100' : 'opacity-0'
-      }`}
+      className='flex flex-col justify-start mx-5 space-y-5 text-center lg:items-start lg:text-left lg:mx-auto lg:max-w-4xl transition-opacity duration-700'
     >
       <h2
-        className={` text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x text-shadow text-shadow transition-all duration-700 transform ${
-          isInView
-            ? 'animate-fade-in [animation-delay:0.0s] opacity-100'
-            : 'opacity-0'
-        }`}
+        className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x text-shadow text-shadow transition-all duration-700 transform'
       >
         Projects
       </h2>
       <p
-        className={`text-shadow mt-10 transition-all duration-700 delay-500 transform ${
-          isInView
-            ? 'animate-fade-up [animation-delay:0.5s] opacity-100'
-            : 'opacity-0'
-        }`}
+        className='text-shadow mt-10 transition-all duration-700 delay-500 transform'
       >
         These projects demonstrate my ability to build responsive, accessible,
         and user-friendly interfaces using modern frontend technologies like
@@ -60,13 +47,7 @@ const Projects = () => {
             githubUrl={project.githubUrl}
             imageUrl={project.imageUrl}
             imageAlt={project.imageAlt}
-            className={`transition-all duration-700 transform ${
-              isInView
-                ? `animate-fade-up [animation-delay:${
-                    0.8 + index * 0.2
-                  }s] opacity-100`
-                : 'opacity-0'
-            }`}
+            className='transition-all duration-700 transform'
           />
         ))}
       </div>

@@ -1,17 +1,16 @@
 import { useRef, useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
+import { LogoTitle } from './components/LogoTitle';
 import { NavMenu } from './components/NavMenu';
 import { ThemeSwitch } from './components/ThemeSwitch';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useClickOutside } from './hooks/useClickOutside';
-import { useThemeMode } from './hooks/useThemeMode';
+import { useInView } from './hooks/useInView';
 import About from './pages/About';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import { LogoTitle } from './components/LogoTitle';
 
 function App() {
-  const [isDark, setIsDark] = useThemeMode(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
@@ -24,25 +23,28 @@ function App() {
   // Close dropdown when clicking outside, excluding toggle button
   useClickOutside(dropdownRef, () => setMenuOpen(false), [toggleButtonRef]);
 
+  const isHomeView = useInView({ ref: homeRef });
+  const isProjectView = useInView({ ref: projectsRef });
+  const isAboutView = useInView({ ref: aboutRef });
+
   return (
     <>
       <header className='fixed top-0 left-0 w-full z-50 px-6 py-3 bg-[var(--card-bg)] backdrop-blur-md shadow-md border-b border-[var(--card-border)]'>
         {/* Desktop header */}
         <div className='hidden md:flex justify-between items-center'>
-          <LogoTitle/>
+          <LogoTitle />
           <div className='flex-1'>
             <NavMenu active={activeSection} />
           </div>
           <ThemeSwitch
-            isDark={isDark}
-            toggleTheme={() => setIsDark((prev) => !prev)}
+        
           />
         </div>
 
         {/* Mobile header */}
         <div className='flex items-center justify-between md:hidden'>
           {/* <span className='text-lg font-bold'>My Site</span> */}
-          <LogoTitle/>
+          <LogoTitle />
           <button
             ref={toggleButtonRef}
             onClick={() => setMenuOpen((prev) => !prev)}
@@ -72,10 +74,10 @@ function App() {
           </button>
         </div>
 
-      {/* Mobile dropdown */}
-<div
-  ref={dropdownRef}
-  className={`
+        {/* Mobile dropdown */}
+        <div
+          ref={dropdownRef}
+          className={`
     fixed top-[60px] right-0 h-[calc(100vh-60px)] w-1/2
     bg-[var(--card-bg)] backdrop-blur-md border-l border-[var(--card-border)]
     flex flex-col gap-6 items-center pt-6
@@ -83,25 +85,42 @@ function App() {
     ${menuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-100'}
     z-50
   `}
->
+        >
           <NavMenu
             active={activeSection}
             onNavigate={() => setMenuOpen(false)}
           />
           <ThemeSwitch
-            isDark={isDark}
-            toggleTheme={() => setIsDark((prev) => !prev)}
+       
           />
         </div>
       </header>
       <main>
-        <section id='home' ref={homeRef}>
+        <section
+          id='home'
+          ref={homeRef}
+          className={`transition-opacity ease-in duration-700 ${
+            isHomeView ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <Home />
         </section>
-        <section id='projects' ref={projectsRef}>
+        <section
+          id='projects'
+          ref={projectsRef}
+          className={`transition-opacity ease-in duration-700 ${
+            isProjectView ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <Projects />
         </section>
-        <section id='about' ref={aboutRef}>
+        <section
+          id='about'
+          ref={aboutRef}
+          className={`transition-opacity ease-in duration-700  ${
+            isAboutView ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <About />
         </section>
       </main>

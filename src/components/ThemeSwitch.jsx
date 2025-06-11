@@ -1,6 +1,9 @@
 import { FaMoon, FaSun } from 'react-icons/fa6';
+import { useTheme } from '../contexts/ThemeContext';
 
-export const ThemeSwitch = ({ isDark, toggleTheme }) => {
+export const ThemeSwitch = () => {
+  const { isDark, toggleTheme } = useTheme();
+  
   return (
     <button
       onClick={toggleTheme}
