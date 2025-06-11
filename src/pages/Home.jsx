@@ -1,4 +1,4 @@
-import { FaCode, FaEnvelope } from 'react-icons/fa6';
+import { FaCode, FaUser } from 'react-icons/fa6';
 import { LinkItem } from '../components/LinkItem';
 import {
   DartIcon,
@@ -21,17 +21,11 @@ const Home = () => {
       </h2>
       <p className='text-shadow animate-fade-up mt-10 opacity-0 [animation-delay:0.7s]'>
         I´m a frontend developer with experiences in creating websites, apps and
-        UX/UI.
+        UX/UI. <br/> Hope you enjoy my website!
       </p>
-
-      <div className='flex justify-center flex-wrap gap-2 mb-18'>
-        <Tag content={<ReactIcon />} hoverContent={'React'} />
-        <Tag content={<JavaScriptIcon />} hoverContent={'JavaScript'} />
-        <Tag content={<FlutterIcon />} hoverContent={'Flutter'} />
-        <Tag content={<DartIcon />} hoverContent={'Dart'} />
-        <Tag content={'Read more about me'} className='text-sm '  href='#about'/>
-      </div>
+   
       <div className='flex justify-center gap-4'>
+        <LinkItem href='#about' label='About' icon={<FaUser className="transition-colors duration-300" />} />
         <LinkItem href='#projects' label='Projects' icon={<FaCode className="transition-colors duration-300" />} />
       </div>
     </section>

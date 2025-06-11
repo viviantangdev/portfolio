@@ -1,8 +1,5 @@
-const navItems = [
-  { label: 'Home', href: 'home' },
-  { label: 'Projects', href: 'projects' },
-  { label: 'About Me', href: 'about' },
-];
+import { pages } from '../data/pages';
+
 
 export const NavMenu = ({ active , onNavigate}) => {
   const handleClick = (e, id) => {
@@ -17,7 +14,7 @@ export const NavMenu = ({ active , onNavigate}) => {
   return (
     <nav className=''>
       <ul className='flex flex-col md:flex-row  gap-8 items-center justify-center px-6 py-3'>
-        {navItems.map(({ label, href }) => (
+        {pages.map(({ label, href }) => (
           <li key={href}>
             <a
               href={`#${href}`}

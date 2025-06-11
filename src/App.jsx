@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
+import { Footer } from './components/Footer';
 import { LogoTitle } from './components/LogoTitle';
 import { NavMenu } from './components/NavMenu';
 import { ThemeSwitch } from './components/ThemeSwitch';
@@ -9,23 +10,24 @@ import { useInView } from './hooks/useInView';
 import About from './pages/About';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import { useMenu } from './contexts/MenuContext';
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { menuOpen, toggleMenu, closeMenu } = useMenu();
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
   const aboutRef = useRef(null);
   const dropdownRef = useRef(null);
   const toggleButtonRef = useRef(null);
 
-  const activeSection = useActiveSection([homeRef, projectsRef, aboutRef]);
+  const activeSection = useActiveSection([homeRef, aboutRef, projectsRef]);
 
   // Close dropdown when clicking outside, excluding toggle button
-  useClickOutside(dropdownRef, () => setMenuOpen(false), [toggleButtonRef]);
+  useClickOutside(dropdownRef, closeMenu, [toggleButtonRef]);
 
   const isHomeView = useInView({ ref: homeRef });
-  const isProjectView = useInView({ ref: projectsRef });
   const isAboutView = useInView({ ref: aboutRef });
+  const isProjectView = useInView({ ref: projectsRef });
 
   return (
     <>
@@ -36,9 +38,7 @@ function App() {
           <div className='flex-1'>
             <NavMenu active={activeSection} />
           </div>
-          <ThemeSwitch
-        
-          />
+          <ThemeSwitch />
         </div>
 
         {/* Mobile header */}
@@ -47,7 +47,7 @@ function App() {
           <LogoTitle />
           <button
             ref={toggleButtonRef}
-            onClick={() => setMenuOpen((prev) => !prev)}
+            onClick={toggleMenu}
             className='w-8 h-8 flex items-center justify-center transition-transform cursor-pointer'
             aria-label='Toggle menu'
           >
@@ -88,14 +88,12 @@ function App() {
         >
           <NavMenu
             active={activeSection}
-            onNavigate={() => setMenuOpen(false)}
+            onNavigate={toggleMenu}
           />
-          <ThemeSwitch
-       
-          />
+          <ThemeSwitch />
         </div>
       </header>
-      <main>
+      <main className='flex-grow'>
         <section
           id='home'
           ref={homeRef}
@@ -105,15 +103,7 @@ function App() {
         >
           <Home />
         </section>
-        <section
-          id='projects'
-          ref={projectsRef}
-          className={`transition-opacity ease-in duration-700 ${
-            isProjectView ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <Projects />
-        </section>
+
         <section
           id='about'
           ref={aboutRef}
@@ -123,7 +113,18 @@ function App() {
         >
           <About />
         </section>
+
+        <section
+          id='projects'
+          ref={projectsRef}
+          className={`transition-opacity ease-in duration-700 ${
+            isProjectView ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <Projects />
+        </section>
       </main>
+      <Footer />
     </>
   );
 }

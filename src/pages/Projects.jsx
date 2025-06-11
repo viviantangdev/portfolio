@@ -12,8 +12,8 @@ const Projects = () => {
         { content: <TailwindIcon />, hoverContent: 'Tailwind' },
         
       ],
-      liveUrl: 'https://your-portfolio-link.com',
-      githubUrl: 'https://github.com/yourusername/portfolio-site',
+      liveUrl: 'https:viviantangdev.netlify.app',
+      githubUrl: 'https://github.com/viviantangdev/portfolio',
       imageUrl: testImage,
       imageAlt: 'Screenshot of Portfolio Website',
     },

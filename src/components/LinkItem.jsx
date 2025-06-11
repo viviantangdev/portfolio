@@ -34,7 +34,7 @@ export const LinkItem = ({ icon, label, href }) => {
 
       <span
         className='
-        hover:font-semibold  tracking-wide text-[var(--card-text)] transition-all duration-300
+         tracking-wide text-[var(--card-text)] transition-all duration-300
           group-hover:text-[var(--tw-accent-text)] group-hover:tracking-wider
         '
       >
