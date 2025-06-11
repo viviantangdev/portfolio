@@ -24,7 +24,7 @@ const Home = () => {
         UX/UI.
       </p>
 
-      <div className='flex justify-center flex-wrap gap-2 mb-10'>
+      <div className='flex justify-center flex-wrap gap-2 mb-18'>
         <Tag content={<ReactIcon />} hoverContent={'React'} />
         <Tag content={<JavaScriptIcon />} hoverContent={'JavaScript'} />
         <Tag content={<FlutterIcon />} hoverContent={'Flutter'} />
@@ -32,7 +32,7 @@ const Home = () => {
         <Tag content={'Read more about me'} className='text-sm '  href='#about'/>
       </div>
       <div className='flex justify-center gap-4'>
-        <LinkItem href='/projects' label='Projects' icon={<FaCode className="transition-colors duration-300" />} />
+        <LinkItem href='#projects' label='Projects' icon={<FaCode className="transition-colors duration-300" />} />
       </div>
     </section>
   );

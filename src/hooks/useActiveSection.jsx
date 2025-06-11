@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useActiveSection = (sectionRefs, options = { threshold: 0.6 }) => {
+export const useActiveSection = (sectionRefs, options = { threshold: 0.2 }) => {
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {

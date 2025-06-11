@@ -1,35 +1,33 @@
 import testImage from '../assets/test_image.jpg';
 import { ProjectCard } from '../components/ProjectCard';
+import { ReactIcon, TailwindIcon } from '../components/SvgIcon';
 
 const Projects = () => {
-
   const projects = [
     {
       title: 'Portfolio Website',
       description: 'My personal website showcasing projects and skills.',
-      tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
-      // tecStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+      tecStack: [
+        { content: <ReactIcon />, hoverContent: 'React' },
+        { content: <TailwindIcon />, hoverContent: 'Tailwind' },
+        
+      ],
       liveUrl: 'https://your-portfolio-link.com',
       githubUrl: 'https://github.com/yourusername/portfolio-site',
       imageUrl: testImage,
       imageAlt: 'Screenshot of Portfolio Website',
     },
-   
   ];
 
   return (
     <section
-    id='projects'
+      id='projects'
       className='flex flex-col justify-start mx-5 space-y-5 text-center lg:items-start lg:text-left lg:mx-auto lg:max-w-4xl transition-opacity duration-700'
     >
-      <h2
-        className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x text-shadow text-shadow transition-all duration-700 transform'
-      >
+      <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x text-shadow text-shadow transition-all duration-700 transform'>
         Projects
       </h2>
-      <p
-        className='text-shadow mt-10 transition-all duration-700 delay-500 transform'
-      >
+      <p className='text-shadow mt-10 transition-all duration-700 delay-500 transform'>
         These projects demonstrate my ability to build responsive, accessible,
         and user-friendly interfaces using modern frontend technologies like
         React, Tailwind CSS, and more.

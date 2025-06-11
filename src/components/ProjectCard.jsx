@@ -34,7 +34,7 @@ export const ProjectCard = ({
         </p>
         <div className='flex flex-wrap gap-2 mt-4'>
           {tecStack.map((tech, index) => (
-            <Tag key={index} content={tech.icon} hoverContent={tech.text} />
+            <Tag key={index} content={tech.content} hoverContent={tech.hoverContent} />
           ))}
         </div>
 

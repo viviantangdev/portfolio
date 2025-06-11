@@ -1,7 +1,7 @@
 const navItems = [
   { label: 'Home', href: 'home' },
-  { label: 'About Me', href: 'about' },
   { label: 'Projects', href: 'projects' },
+  { label: 'About Me', href: 'about' },
 ];
 
 export const NavMenu = ({ active , onNavigate}) => {
