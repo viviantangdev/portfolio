@@ -4,13 +4,13 @@ import { Footer } from './components/Footer';
 import { LogoTitle } from './components/LogoTitle';
 import { NavMenu } from './components/NavMenu';
 import { ThemeSwitch } from './components/ThemeSwitch';
+import { useMenu } from './contexts/MenuContext';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useClickOutside } from './hooks/useClickOutside';
 import { useInView } from './hooks/useInView';
 import About from './pages/About';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import { useMenu } from './contexts/MenuContext';
 
 function App() {
   const { menuOpen, toggleMenu, closeMenu } = useMenu();
@@ -86,10 +86,7 @@ function App() {
     z-50
   `}
         >
-          <NavMenu
-            active={activeSection}
-            onNavigate={toggleMenu}
-          />
+          <NavMenu active={activeSection} onNavigate={toggleMenu} />
           <ThemeSwitch />
         </div>
       </header>
@@ -97,7 +94,7 @@ function App() {
         <section
           id='home'
           ref={homeRef}
-          className={`transition-opacity ease-in duration-700 ${
+          className={`section-first transition-opacity ease-in duration-700 ${
             isHomeView ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -107,7 +104,7 @@ function App() {
         <section
           id='about'
           ref={aboutRef}
-          className={`transition-opacity ease-in duration-700  ${
+          className={`section-common transition-opacity ease-in duration-700  ${
             isAboutView ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -117,7 +114,7 @@ function App() {
         <section
           id='projects'
           ref={projectsRef}
-          className={`transition-opacity ease-in duration-700 ${
+          className={`section-common transition-opacity ease-in duration-700 ${
             isProjectView ? 'opacity-100' : 'opacity-0'
           }`}
         >

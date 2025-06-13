@@ -101,12 +101,17 @@ h1 {
 
 h2 {
   font-family: 'Lato', sans-serif;
-  @apply text-2xl font-extrabold mt-4;
+  @apply text-2xl font-extrabold;
 }
-
 section {
   min-height: calc(100vh - 80px); /* 100vh minus nav height */
   scroll-margin-top: 80px; /* adjust to match your nav height */
+}
+.section-first {
+  @apply flex flex-col justify-center h-screen mx-5 space-y-5 text-center md:items-start md:text-left md:mx-auto md:max-w-2xl;
+}
+.section-common {
+  @apply flex flex-col justify-start my-16 mx-5 text-center md:items-start md:text-left md:mx-auto md:max-w-2xl transition-opacity duration-700;
 }
 
 /* Glassmorphic card utility */

@@ -1,11 +1,11 @@
-export const Tag = ({ content, hoverContent, className }) => {
+export const Tag = ({ icon, text, className }) => {
   
   const baseClasses = `
     flex flex-col items-center justify-center
    cursor-pointer transform transition
     duration-300 uppercase px-4 py-2 rounded-md
     glass-card glass-card-hover
-    shadow-sm
+    shadow-sm 
   `;
 
   const tooltipClasses = `
@@ -15,8 +15,8 @@ export const Tag = ({ content, hoverContent, className }) => {
 
   return (
     <div className={baseClasses}>
-      <span className={className}>{content}</span>
-      {hoverContent && <div className={tooltipClasses}>{hoverContent}</div>}
+      <span className={className}>{icon}</span>
+      {text && <div className={tooltipClasses}>{text}</div>}
     </div>
   );
 };

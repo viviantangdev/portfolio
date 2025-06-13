@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaLinkedin , FaHeart} from 'react-icons/fa6';
 import { pages } from '../data/pages';
 
 export const Footer = () => {
@@ -45,10 +45,13 @@ export const Footer = () => {
         </div>
 
         {/* Footer Text */}
-        <span className='text-xs'>
-          &copy; {new Date().getFullYear()} Vivian Tang · Built with React &
-          Tailwind · 💙
-        </span>
+        <div className='flex gap-2'>
+          <span className='text-xs opacity-[50%]'>
+            &copy; {new Date().getFullYear()} Vivian Tang · Built with React &
+            Tailwind
+          </span>
+          <FaHeart className='opacity-[50%]'/>
+        </div>
       </div>
     </footer>
   );

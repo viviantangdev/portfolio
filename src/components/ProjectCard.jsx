@@ -32,9 +32,9 @@ export const ProjectCard = ({
         <p className='text-sm text-[var(--card-text)] flex-grow'>
           {description}
         </p>
-        <div className='flex flex-wrap gap-2 mt-4'>
+        <div className='flex flex-wrap gap-2 mt-4 justify-center md:justify-start'>
           {tecStack.map((tech, index) => (
-            <Tag key={index} content={tech.content} hoverContent={tech.hoverContent} />
+            <Tag key={index} icon={tech.icon} text={tech.text} />
           ))}
         </div>
 
