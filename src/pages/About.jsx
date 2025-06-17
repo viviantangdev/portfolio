@@ -4,7 +4,7 @@ import {
   myApproach,
   outsideOfCoding,
 } from '../data/aboutBullets';
-import { TechCategory, techStack } from '../data/techStack';
+import { techCategory, techStack } from '../data/techStack';
 
 const About = () => {
   function filterStack(category) {
@@ -21,7 +21,7 @@ const About = () => {
       </span>
       <p className='my-3'>
         I’m a frontend developer with 2 years of experience crafting
-        user-friendly, responsive web applications using modern tools and
+        user-friendly, responsive applications using modern tools and
         frameworks.
       </p>
       {/* Highligt bullets */}
@@ -74,6 +74,7 @@ const About = () => {
           </ul>
         </div>
       </div>
+
       {/* Tools I Use Section */}
       <div className='my-12'>
         <div className='gap-2 flex flex-col'>
@@ -86,11 +87,11 @@ const About = () => {
           {/* category: FRAMEWORK */}
           <div className='flex flex-col gap-3'>
             <span>Framework:</span>
-            <div className='flex flex-wrap gap-2'>
-              {filterStack(TechCategory.FRAMEWORK).map((stack, index) => (
+            <div className='flex flex-wrap gap-2 justify-center md:justify-start'>
+              {filterStack(techCategory.FRAMEWORK).map((stack, index) => (
                 <Tag
                   key={index}
-                  icon={<stack.icon />}
+                  icon={stack.icon}
                   text={stack.text}
                   className='transition-all duration-700 transform'
                 />
@@ -100,11 +101,11 @@ const About = () => {
           {/* category: LANGUAGE */}
           <div className='flex flex-col gap-3'>
             <span className=''>Language:</span>
-            <div className='flex flex-wrap gap-2'>
-              {filterStack(TechCategory.LANGUAGE).map((stack, index) => (
+            <div className='flex flex-wrap gap-2 justify-center md:justify-start'>
+              {filterStack(techCategory.LANGUAGE).map((stack, index) => (
                 <Tag
                   key={index}
-                  icon={<stack.icon />}
+                  icon={stack.icon}
                   text={stack.text}
                   className='transition-all duration-700 transform'
                 />
@@ -114,11 +115,11 @@ const About = () => {
           {/* category: STYLING */}
           <div className='flex flex-col gap-3'>
             <span>Styling & design:</span>
-            <div className='flex flex-wrap gap-2'>
-              {filterStack(TechCategory.STYLING).map((stack, index) => (
+            <div className='flex flex-wrap gap-2 justify-center md:justify-start'>
+              {filterStack(techCategory.STYLING).map((stack, index) => (
                 <Tag
                   key={index}
-                  icon={<stack.icon />}
+                  icon={stack.icon}
                   text={stack.text}
                   className='transition-all duration-700 transform'
                 />
