@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGithub, FaLinkedin , FaHeart} from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaHeart, FaLinkedin } from 'react-icons/fa6';
 import { pages } from '../data/pages';
 
 export const Footer = () => {
@@ -15,8 +15,7 @@ export const Footer = () => {
             <FaGithub className='text-xl hover:text-[var(--tw-accent)] transition' />
           </a>
           <a
-            href='https://linkedin.com/in/viviantangdev
-'
+            href='https://linkedin.com/in/viviantangdev'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -50,7 +49,7 @@ export const Footer = () => {
             &copy; {new Date().getFullYear()} Vivian Tang · Built with React &
             Tailwind
           </span>
-          <FaHeart className='opacity-[50%]'/>
+          <FaHeart className='opacity-[50%]' />
         </div>
       </div>
     </footer>
