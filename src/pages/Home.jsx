@@ -1,4 +1,4 @@
-import { FaCode, FaUser } from 'react-icons/fa6';
+import { FaCode } from 'react-icons/fa6';
 import { LinkItem } from '../components/LinkItem';
 
 const Home = () => {
@@ -16,8 +16,7 @@ const Home = () => {
       </p>
    
       <div className='flex justify-center gap-4'>
-        <LinkItem href='#about' label='About' icon={<FaUser className="transition-colors duration-300" />} />
-        <LinkItem href='#projects' label='Projects' icon={<FaCode className="transition-colors duration-300" />} />
+        <LinkItem href='#projects' label='View my work' icon={<FaCode className="transition-colors duration-300" />} />
       </div>
     </>
   );

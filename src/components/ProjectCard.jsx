@@ -10,13 +10,11 @@ export const ProjectCard = ({
   imageAlt,
   liveUrl,
   githubUrl,
-  className = '', // optional className prop with default
 }) => {
   return (
     <article
-      className={`min-h-[300px] bg-[var(--card-bg)] border border-[var(--card-border)]
-    backdrop-blur-md rounded-lg overflow-hidden shadow-lg hover:shadow-xl
-    transition-shadow duration-300 ease-in-out flex flex-col ${className}`}
+      className='min-h-[300px] bg-[var(--card-bg)] border border-[var(--card-border)]
+    backdrop-blur-md rounded-lg overflow-hidden shadow-lg transition-shadow duration-700 ease-in-out flex flex-col transform '
     >
       <img
         src={imageUrl}
@@ -32,9 +30,9 @@ export const ProjectCard = ({
         <p className='text-sm text-[var(--card-text)] flex-grow'>
           {description}
         </p>
-        <div className='flex flex-wrap gap-2 mt-4 justify-center md:justify-start'>
+        <div className='flex flex-wrap gap-2 mt-8 justify-center md:justify-start'>
           {tecStack.map((tech, index) => (
-            <Tag key={index} icon={tech.icon} text={tech.text} />
+            <Tag key={index} icon={tech.icon} text={tech.text}/>
           ))}
         </div>
 

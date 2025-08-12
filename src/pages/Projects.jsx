@@ -1,6 +1,6 @@
 import testImage from '../assets/test_image.jpg';
 import { ProjectCard } from '../components/ProjectCard';
-import { ReactIcon, TailwindIcon } from '../components/SvgIcon';
+import { ReactIcon, TailwindIcon } from '../data/SvgIcon';
 
 const Projects = () => {
   const projects = [
@@ -10,9 +10,8 @@ const Projects = () => {
       tecStack: [
         { icon: <ReactIcon />, text: 'React' },
         { icon: <TailwindIcon />, text: 'Tailwind' },
-        
       ],
-      liveUrl: 'https:viviantangdev.netlify.app',
+      liveUrl: 'https://viviantangdev.netlify.app',
       githubUrl: 'https://github.com/viviantangdev/portfolio',
       imageUrl: testImage,
       imageAlt: 'Screenshot of Portfolio Website',
@@ -20,8 +19,7 @@ const Projects = () => {
   ];
 
   return (
-    <
-    >
+    <>
       <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x text-shadow text-shadow transition-all duration-700 transform'>
         Projects
       </h2>
@@ -31,7 +29,7 @@ const Projects = () => {
         React, Tailwind CSS, and more.
       </p>
       <div
-        className={`grid gap-6 grid-cols-1 md:grid-cols-2 transition-all duration-700 transform `}
+        className={`w-full transition-all duration-700 transform `}
       >
         {projects.map((project, index) => (
           <ProjectCard
@@ -43,7 +41,6 @@ const Projects = () => {
             githubUrl={project.githubUrl}
             imageUrl={project.imageUrl}
             imageAlt={project.imageAlt}
-            className='transition-all duration-700 transform'
           />
         ))}
       </div>

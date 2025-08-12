@@ -13,16 +13,18 @@ function App() {
 
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
-  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
 
   const isHomeView = useInView({ ref: homeRef });
-  const isAboutView = useInView({ ref: aboutRef });
+  const isServicesView = useInView({ ref: servicesRef });
   const isProjectView = useInView({ ref: projectsRef });
+  const isContactView = useInView({ ref: contactRef });
 
   const dropdownRef = useRef(null);
   const toggleButtonRef = useRef(null);
 
-  const activeSection = useActiveSection([homeRef, aboutRef, projectsRef]);
+  const activeSection = useActiveSection([homeRef, servicesRef, projectsRef, contactRef]);
 
   // Close dropdown when clicking outside, excluding toggle button
   useClickOutside(dropdownRef, closeMenu, [toggleButtonRef]);
@@ -41,13 +43,15 @@ function App() {
         pages={pages}
         refs={{
           home: homeRef,
-          about: aboutRef,
+          services: servicesRef,
           projects: projectsRef,
+          contact: contactRef,
         }}
         views={{
           home: isHomeView,
-          about: isAboutView,
+          services: isServicesView,
           projects: isProjectView,
+          contact: isContactView,
         }}
       />
 
