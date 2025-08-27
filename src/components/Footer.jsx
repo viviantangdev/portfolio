@@ -1,9 +1,7 @@
 import { FaEnvelope, FaGithub, FaHeart, FaLinkedin } from 'react-icons/fa6';
-import { pages } from '../data/pages';
 
 export const Footer = () => {
   return (
-    <footer className='absolute w-full px-6 py-10 mt-20 border-t text-sm text-center border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--card-text)] shadow-inner backdrop-blur-md'>
       <div className='max-w-6xl mx-auto flex flex-col items-center space-y-4'>
         {/* Social Icons */}
         <div className='flex gap-4'>
@@ -29,20 +27,10 @@ export const Footer = () => {
             <FaEnvelope className='text-xl hover:text-[var(--tw-accent)] transition' />
           </a>
         </div>
-
         {/* Navigation Links */}
-        <div className='flex gap-4 '>
-          {pages.map((item) => (
-            <a
-              key={item.href}
-              href={`#${item.href}`}
-              className='hover:text-[var(--tw-accent)] transition'
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-
+        {
+          // TODO Add navlinks for quick navigation in footer
+        }
         {/* Footer Text */}
         <div className='flex gap-2'>
           <span className='text-xs opacity-[50%]'>
@@ -52,6 +40,5 @@ export const Footer = () => {
           <FaHeart className='opacity-[50%]' />
         </div>
       </div>
-    </footer>
   );
 };
