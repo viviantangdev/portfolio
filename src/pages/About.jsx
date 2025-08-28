@@ -1,12 +1,13 @@
 import ExperienseCard from '../components/ExperienseCard';
 import SectionTitle from '../components/SectionTitle';
 import { experiences } from '../data/experiences';
+import { techStacks } from '../data/techStacks';
 
 const About = () => {
   return (
-    <section className='flex flex-col items-center'>
-      <SectionTitle title={'About me'}/>
-      <div className='space-y-3 mb-12'>
+    <section>
+      <SectionTitle title={'About me'} />
+      <div className='space-y-3'>
         <p>
           I´m a frontend developer who enjoys creating responsive, accessible
           and interactive applications that looks appealing and enjoyable for
@@ -18,28 +19,38 @@ const About = () => {
         </p>
       </div>
 
-      <article>
-          <h3>Technical expertise</h3>
-          {/* TODO Add tech stack*/}
+      <article >
+        <h3>Technical expertise</h3>
+        {/* TODO Add tech stack*/}
+        <ol className='flex justify-center py-4 gap-2 flex-wrap'>
+          {techStacks.map((tech) => (
+            <li key={tech.key}>
+                <div className='card flex flex-col justify-center items-center gap-1.5'>
+                    {tech.icon}
+                    <p>{tech.name}</p>
+                </div>
+            </li>
+          ))}
+        </ol>
       </article>
 
       <article>
-          <h3 className='text-center'>My journey</h3>
-          <ol>
-            {experiences.map((exp) => (
-              <li key={exp.key}>
-                <ExperienseCard
-                  key={exp.company}
-                  role={exp.role}
-                  company={exp.company}
-                  period={exp.period}
-                  description={exp.description}
-                />
-              </li>
-            ))}
-          </ol>
+        <h3>My journey</h3>
+        <ol className='flex flex-col py-4 gap-2'>
+          {experiences.map((exp) => (
+            <li key={exp.key}>
+              <ExperienseCard
+                key={exp.company}
+                role={exp.role}
+                company={exp.company}
+                period={exp.period}
+                icon={exp.icon}
+                description={exp.description}
+              />
+            </li>
+          ))}
+        </ol>
       </article>
-    
     </section>
   );
 };
