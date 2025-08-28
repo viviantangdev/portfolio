@@ -1,10 +1,13 @@
-import React from 'react'
+import SectionTitle from '../components/SectionTitle';
 
 const Project = () => {
   return (
-    <div>Projects</div>
-    /*TODO Add prjects*/
-  )
-}
+    <section>
+      <SectionTitle title={'Projects'} />
+    </section>
 
-export default Project
+    /*TODO Add prjects*/
+  );
+};
+
+export default Project;

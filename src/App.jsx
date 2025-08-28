@@ -12,7 +12,7 @@ function App() {
         <Project/>
         <Contact/>
       </main>
-      <footer className='absolute w-full px-6 py-10 border-t text-sm text-center border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--card-text)] shadow-inner backdrop-blur-md'>
+      <footer className='absolute left-0 right-0 w-full px-6 py-10 border-t text-sm text-center border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--card-text)] shadow-inner backdrop-blur-md'>
         <Footer />
       </footer>
     </>
