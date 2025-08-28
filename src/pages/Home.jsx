@@ -2,12 +2,11 @@
 const Home = () => {
   return (
     <div className='flex flex-col h-svh justify-center items-center text-center'>
-      <h1>Vivian Tang</h1>
-      <h2>Frontend Developer</h2>
-      <p>Looking to expand my expertise in the tech realm</p>
-      <button class='btn'>
-        <div class='scroll'> </div>
-      </button>
+      <h1 className='gradient-text'>Vivian tang</h1>
+      <p className="text-2xl font-extralight">Frontend Developer</p>
+      <p className='secondary-paragraph p-2'>
+        Looking to expand my expertise in the tech realm
+      </p>
     </div>
   );
 };
