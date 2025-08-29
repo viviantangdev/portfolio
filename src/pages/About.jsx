@@ -7,7 +7,7 @@ import { techStacks } from '../data/techStacks';
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <AnimationFadeIn>
 
       <SectionTitle title={'About me'} />
@@ -35,7 +35,7 @@ const About = () => {
                 <li key={tech.key}>
                     <div className='flex flex-col justify-center items-center gap-2'>
                         {tech.icon}
-                        <p className='opacity-60'>{tech.name}</p>
+                        <p className='secondary-paragraph'>{tech.name}</p>
                     </div>
                 </li>
               </AnimationScale>

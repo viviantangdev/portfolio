@@ -6,7 +6,7 @@ import { projects } from '../data/projects';
 
 const Project = () => {
   return (
-    <section>
+    <section id="projects">
       <AnimationFadeIn>
 
       <SectionTitle title={'Projects'} />

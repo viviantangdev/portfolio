@@ -4,7 +4,7 @@ import { socials } from '../data/socials';
 
 const Contact = () => {
   return (
-    <section className='pb-25'>
+    <section id="contact" className='pb-25'>
       <AnimationFadeIn>
 
       <SectionTitle title={'Connect with me'} />
