@@ -85,7 +85,29 @@ footer {
 
 /* TODO Fix watermark */
 .watermark {
-  @apply 
-  absolute w-2/5 top-0 right-0
+  @apply absolute w-2/5 top-0 right-0
   opacity-10 pointer-events-none;
+}
+
+/* TODO hover */
+.btn{
+  @apply px-5 py-3 rounded-2xl border-2 text-neutral-900 font-medium;
+  @variant dark {
+    @apply text-neutral-100;
+  }
+}
+.gradient-btn {
+  @apply px-5 py-3 rounded-2xl 
+  text-neutral-100 font-medium
+  bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600;
+  @variant dark {
+    @apply from-cyan-400 via-sky-400 to-blue-500;
+  }
+}
+
+.tag{
+  @apply text-sm my-3 px-2 py-2 rounded-2xl border-1 border-gray-200;
+  @variant dark {
+    @apply border-gray-800;
+  }
 }
