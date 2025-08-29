@@ -1,12 +1,14 @@
 import { FaGithub } from 'react-icons/fa6';
 
 const iconSize = 25;
+const svgClass = 'drop-shadow-lg';
 
 export const techStacks = [
   {
     name: 'React',
     icon: (
       <svg
+        className={svgClass}
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -22,6 +24,7 @@ export const techStacks = [
     name: 'Flutter',
     icon: (
       <svg
+        className={svgClass}
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -54,7 +57,8 @@ export const techStacks = [
   {
     name: 'HTML',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -81,7 +85,8 @@ export const techStacks = [
   {
     name: 'CSS',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -116,7 +121,8 @@ export const techStacks = [
   {
     name: 'Javascript',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 256 256'
         height='1.5em'
@@ -134,7 +140,8 @@ export const techStacks = [
   {
     name: 'Dart',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -165,7 +172,8 @@ export const techStacks = [
   {
     name: 'SCSS',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 32 32'
         height='1.5em'
@@ -185,7 +193,8 @@ export const techStacks = [
   {
     name: 'Tailwind',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -200,7 +209,8 @@ export const techStacks = [
   {
     name: 'Figma',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -231,7 +241,8 @@ export const techStacks = [
   {
     name: 'Git',
     icon: (
-      <svg
+      <svg        className={svgClass}
+
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 128 128'
         height='1.5em'
@@ -245,6 +256,7 @@ export const techStacks = [
   },
   {
     name: 'Github',
-    icon: <FaGithub size={iconSize} />,
+    icon: <FaGithub size={iconSize}  className={svgClass}
+ />,
   },
 ];

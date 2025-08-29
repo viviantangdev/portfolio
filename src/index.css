@@ -1,5 +1,47 @@
 @import 'tailwindcss';
 
+@theme {
+  --animate-fade-in: fade-in 1.5s linear normal forwards;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-scale: scale-in 0.5s linear 0.2s forwards;
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  --animate-scrolling: scrolling 2s linear infinite;
+  @keyframes scrolling {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+}
+
 * {
   @apply box-border scroll-smooth;
 }
@@ -7,8 +49,7 @@
 body {
   @apply m-0 px-6 max-w-screen
   bg-gradient-to-br from-neutral-50 via-slate-50 to-neutral-100   
-text-neutral-900
-  transition-all;
+text-neutral-900 transition-all;
   @variant dark {
     @apply from-neutral-950 via-slate-900 to-neutral-950  
     text-neutral-100;
@@ -34,7 +75,7 @@ h3 {
   @apply capitalize font-bold;
 }
 p {
-  @apply text-sm;
+  @apply text-sm max-w-[550px];
 }
 
 .secondary-paragraph {
@@ -44,7 +85,7 @@ p {
   }
 }
 section {
-  @apply flex flex-col items-center pt-12;
+  @apply flex flex-col items-center py-12;
 }
 article {
   @apply flex flex-col items-center mt-17;
@@ -77,7 +118,7 @@ footer {
 
 .card {
   @apply rounded-xl p-4 border-2 border-gray-200
-  relative shadow-sm overflow-hidden;
+  relative shadow-sm overflow-hidden max-w-[550px];
   @variant dark {
     @apply border-gray-800;
   }
@@ -90,7 +131,7 @@ footer {
 }
 
 /* TODO hover */
-.btn{
+.btn {
   @apply px-5 py-3 rounded-2xl border-2 text-neutral-900 font-medium;
   @variant dark {
     @apply text-neutral-100;
@@ -105,9 +146,26 @@ footer {
   }
 }
 
-.tag{
+.tag {
   @apply text-sm my-3 px-2 py-2 rounded-2xl border-1 border-gray-200;
   @variant dark {
     @apply border-gray-800;
+  }
+}
+
+.mouse-btn {
+  @apply flex w-5 h-10
+  rounded-2xl border-1 border-gray-200;
+  @variant dark {
+    @apply border-gray-800;
+  }
+}
+
+.mouse-scroll {
+  @apply block w-2.5 h-2.5 m-auto
+  rounded-[50%]
+  bg-gradient-to-br  from-cyan-400 via-sky-400 to-blue-500;
+  @variant dark {
+    @apply from-gray-400 via-gray-500 to-gray-600;
   }
 }

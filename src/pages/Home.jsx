@@ -1,12 +1,29 @@
+import AnimationFadeIn from '../components/AnimationFadeIn';
+import AnimationScale from '../components/AnimationScale';
+
 // TODO Add an animated scroll down button
 const Home = () => {
   return (
     <section className='h-svh justify-center'>
-      <h1 className='gradient-text p-4'>Vivian tang</h1>
-      <span className="text-2xl font-extralight">Frontend Developer</span>
-      <p className='secondary-paragraph p-2 text-center'>
-        Looking to expand my expertise in the tech realm
-      </p>
+      <AnimationFadeIn>
+        <h1 className='gradient-text p-4'>Vivian tang</h1>
+      </AnimationFadeIn>
+
+      <AnimationFadeIn>
+        <span className='text-2xl font-extralight'>Frontend Developer</span>
+      </AnimationFadeIn>
+      <AnimationFadeIn>
+        <p className='secondary-paragraph p-2 text-center'>
+          Looking to expand my expertise in the tech realm
+        </p>
+      </AnimationFadeIn>
+      <AnimationScale>
+        <div className='mt-25'>
+          <span className='mouse-btn'>
+            <span className='mouse-scroll animate-scrolling'></span>
+          </span>
+        </div>
+      </AnimationScale>
     </section>
   );
 };
