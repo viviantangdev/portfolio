@@ -51,7 +51,7 @@ article {
 }
 
 footer {
-  @apply absolute left-0 right-0 w-full px-6 py-10 
+  @apply absolute left-0 right-0 w-full px-6 py-10
   border-t border-gray-200 
   text-sm;
   @variant dark {
