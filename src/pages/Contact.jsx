@@ -9,8 +9,8 @@ const Contact = () => {
         <SectionTitle title={'Connect with me'} />
       </AnimationFadeIn>
       <div className='flex gap-1.5'>
-        {socials.map((social) => (
-          <AnimationFadeIn>
+        {socials.map((social, index) => (
+          <AnimationFadeIn key={index}>
             <a
               href={social.link}
               className='card gap-2 w-[95px] flex flex-col justify-center items-center'

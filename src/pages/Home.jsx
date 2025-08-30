@@ -12,7 +12,7 @@ const Home = () => {
         style={{ backgroundImage: `url(${bgImage})` }}
       />
 
-      {/* Dark overlay */}
+      {/* Background overlay */}
       <div className='absolute inset-0 dark:bg-black/80' />
       <AnimationFadeIn>
         <Navbar />

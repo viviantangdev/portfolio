@@ -7,16 +7,16 @@ export const Footer = () => {
     <div className='max-w-6xl mx-auto flex flex-col items-center space-y-4'>
       {/* Social Icons */}
       <div className='flex gap-4'>
-        {socials.map((social) => (
-          <a href={social.link} target='_blank' rel='noopener noreferrer'>
+        {socials.map((social, index) => (
+          <a key={index} href={social.link} target='_blank' rel='noopener noreferrer'>
             {social.icon}
           </a>
         ))}
       </div>
       {/* Navigation Links */}
       <div className='flex gap-5'>
-        {navigation.map((nav) => (
-          <a href={nav.link}>{nav.title}</a>
+        {navigation.map((nav, index) => (
+          <a key={index} href={nav.link}>{nav.title}</a>
         ))}
       </div>
       {/* Footer Text */}

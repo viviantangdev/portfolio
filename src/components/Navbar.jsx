@@ -14,8 +14,8 @@ const Navbar = () => {
         <span className='gradient-text pointer-events-none'>VivianTang</span>
         <div className='flex items-center gap-6'>
           <ol className='hidden gap-1 sm:flex'>
-            {navigation.map((nav) => (
-              <li key={nav.key}>
+            {navigation.map((nav, index) => (
+              <li key={index}>
                 <a href={nav.link} className='gradient-text-hover px-4 py-1'>
                   {nav.title}
                 </a>
@@ -46,9 +46,9 @@ const Navbar = () => {
         {/*Drawer */}
         {isOpen && (
           <ol className='mt-4 space-y-2 '>
-            {navigation.map((nav) => (
-              <AnimationScale>
-                <li key={nav.key} className='text-center gradient-btn'>
+            {navigation.map((nav, index) => (
+              <AnimationScale key={index}>
+                <li  className='text-center gradient-btn'>
                   <a
                     href={nav.link}
                     onClick={() => setIsOpen(!isOpen)}
