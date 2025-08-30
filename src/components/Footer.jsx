@@ -1,4 +1,5 @@
 import { FaHeart } from 'react-icons/fa6';
+import { navigation } from '../data/navigation';
 import { socials } from '../data/socials';
 
 export const Footer = () => {
@@ -13,9 +14,11 @@ export const Footer = () => {
         ))}
       </div>
       {/* Navigation Links */}
-      {
-        // TODO Add navlinks for quick navigation in footer
-      }
+      <div className='flex gap-5'>
+        {navigation.map((nav) => (
+          <a href={nav.link}>{nav.title}</a>
+        ))}
+      </div>
       {/* Footer Text */}
       <div className='flex gap-2'>
         <span className='text-xs opacity-[50%]'>
