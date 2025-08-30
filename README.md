@@ -9,7 +9,7 @@ My portfolio where i showcase my work, skilld and projects. Built with modern fr
 ## ✨ Features
 
 - Resonsive design (mobile-first).
-- Dark/light mode toggle and follows system theme.
+- Dark/light mode toggle.
 - Animated sections with smooth scroll effects.
 - Minimal UI.
 ---

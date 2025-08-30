@@ -8,7 +8,7 @@ const Home = () => {
     <div id='home'>
       {/* Background */}
       <div
-        className='absolute inset-0 bg-cover bg-center bg-fixed opacity-20 dark:opacity-100'
+        className='absolute inset-0 bg-cover bg-center opacity-20 sm:bg-fixed dark:opacity-100'
         style={{ backgroundImage: `url(${bgImage})` }}
       />
 

@@ -1,19 +1,15 @@
 import { useEffect, useState } from 'react';
-import useSystemTheme from '../hooks/useSystemTheme';
-import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
 
 const ThemeToggle = () => {
-  const systemTheme = useSystemTheme();
-  const [theme, setTheme] = useState(systemTheme);
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
-            document.documentElement.classList.remove('light');
-
+      document.documentElement.classList.remove('light');
     } else {
-              document.documentElement.classList.add('light');
-
+      document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
@@ -24,7 +20,7 @@ const ThemeToggle = () => {
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className='gradient-btn'
     >
-      {theme === 'dark' ? <IoSunnyOutline/> : <IoMoonOutline/>}
+      {theme === 'dark' ? <IoSunnyOutline /> : <IoMoonOutline />}
     </button>
   );
 };
