@@ -1,13 +1,20 @@
-/* TODO update 
-# My portfolio
+# 🌐 My portfolio
 
-This is my portfolio where i showcase some projects.
+My portfolio where i showcase my work, skilld and projects. Built with modern frontend and designed with focus on clean UI/UX.
 
-[Live Demo](https://viviantangdev.netlify.app/)
+[🔗 Live Demo](https://viviantangdev.netlify.app/)
 
 ---
 
-## Technologies Used
+## ✨ Features
+
+- Resonsive design (mobile-first).
+- Dark/light mode toggle and follows system theme.
+- Animated sections with smooth scroll effects.
+- Minimal UI.
+---
+
+## 🛠 Technologies Used
 
 - React – Core library for building the user interface and handling state. 
 - Tailwind CSS – Utility-first CSS framework for styling and responsive layouts. 
