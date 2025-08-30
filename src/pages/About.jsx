@@ -7,10 +7,9 @@ import { techStacks } from '../data/techStacks';
 
 const About = () => {
   return (
-    <section id="about">
+    <section id='about'>
       <AnimationFadeIn>
-
-      <SectionTitle title={'About me'} />
+        <SectionTitle title={'About me'} />
       </AnimationFadeIn>
       <AnimationFadeIn>
         <div className='space-y-3'>
@@ -33,10 +32,10 @@ const About = () => {
             {techStacks.map((tech) => (
               <AnimationScale>
                 <li key={tech.key}>
-                    <div className='flex flex-col justify-center items-center gap-2'>
-                        {tech.icon}
-                        <p className='secondary-paragraph'>{tech.name}</p>
-                    </div>
+                  <div className='flex flex-col justify-center items-center gap-2'>
+                    {tech.icon}
+                    <p className='secondary-paragraph'>{tech.name}</p>
+                  </div>
                 </li>
               </AnimationScale>
             ))}
@@ -47,7 +46,7 @@ const About = () => {
       <AnimationFadeIn>
         <article>
           <h3>My journey</h3>
-          <ol className='flex flex-col py-4 gap-2'>
+          <ol className='flex flex-col py-4 gap-5'>
             {experiences.map((exp) => (
               <AnimationFadeIn>
                 <li key={exp.key}>

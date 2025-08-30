@@ -12,10 +12,10 @@ const Contact = () => {
       <div className='flex gap-1.5'>
         {socials.map((social) => (
           <AnimationFadeIn>
-            <div className='card gap-2 w-[95px] flex flex-col justify-center items-center'>
+            <a href={social.link} className='card gap-2 w-[95px] flex flex-col justify-center items-center'>
               {social.icon}
               {social.title}
-            </div>
+            </a>
           </AnimationFadeIn>
         ))}
       </div>

@@ -11,7 +11,7 @@ const Project = () => {
 
       <SectionTitle title={'Projects'} />
       </AnimationFadeIn>
-        <ol className='flex flex-col gap-2'>
+        <ol className='flex flex-col gap-5 '>
         {projects.map((proj) => (
           <AnimationFadeIn>
             <li key={proj.key}>
@@ -21,7 +21,6 @@ const Project = () => {
                 tags={proj.techStacks}
                 liveUrl={proj.liveUrl}
                 GithubUrl={proj.githubUrl}
-                image={proj.image}
               />
             </li>
           </AnimationFadeIn>

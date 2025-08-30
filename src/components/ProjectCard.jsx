@@ -1,5 +1,5 @@
 import { FaGithub } from 'react-icons/fa6';
-import { TfiNewWindow } from "react-icons/tfi";
+import { TfiNewWindow } from 'react-icons/tfi';
 
 const ProjectCard = ({
   title,
@@ -11,7 +11,9 @@ const ProjectCard = ({
 }) => {
   return (
     <div className='card'>
-      <div className="-m-4 mb-4"><img src={image} alt={title} className="w-full h-48 object-cover"/></div>
+      <div className='-m-4 mb-4'>
+        <img src={image} alt={title} className='w-full  object-contain' />
+      </div>
       <h3>{title}</h3>
       <p>{description}</p>
       <div className='flex space-x-1.5'>
@@ -31,7 +33,7 @@ const ProjectCard = ({
         >
           <div className='flex justify-center items-center space-x-2'>
             <span>Live demo</span>
-            <TfiNewWindow size={23}/>
+            <TfiNewWindow size={23} />
             {/* <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
@@ -52,7 +54,7 @@ const ProjectCard = ({
         >
           <div className='flex justify-center items-center space-x-2'>
             <span>Source code</span>
-            <FaGithub size={25}/>
+            <FaGithub size={25} />
             {/* <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 512 512'
