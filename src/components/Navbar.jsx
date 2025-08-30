@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className='flex flex-col items-end'>
         <div className='flex justify-between w-full sm:hidden'>
           {/*Logo*/}
-          <span className='gradient-text pointer-events-none'>VT</span>
+          <span className='gradient-text pointer-events-none'>VivianTang</span>
           <button
             type='button'
             aria-label='toggle menu'
