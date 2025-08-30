@@ -48,7 +48,7 @@
 
 body {
   @apply m-0 px-6 max-w-screen
-  bg-gradient-to-br from-neutral-50 via-slate-50 to-neutral-100   
+bg-gradient-to-br from-neutral-50 via-cyan-50 to-slate-100
 text-neutral-900 transition-all;
   @variant dark {
     @apply from-neutral-950 via-slate-900 to-neutral-950  
