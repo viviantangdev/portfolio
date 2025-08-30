@@ -1,5 +1,5 @@
-import test2Image from '../assets/test2_image.jpg';
-import testImage from '../assets/test_image.jpg';
+// import test2Image from '../assets/test2_image.jpg';
+// import testImage from '../assets/test_image.jpg';
 
 /* TODO fix image*/
 export const projects = [
@@ -10,7 +10,7 @@ export const projects = [
     techStacks: ['React', 'Javascript', 'Tailwind'],
     liveUrl: 'https://viviantangdev.github.io/pomodoro/',
     githubUrl: 'https://github.com/viviantangdev/pomodoro',
-    image: testImage,
+    // image: testImage,
   },
   {
     title: 'Portfolio',
@@ -19,6 +19,6 @@ export const projects = [
     techStacks: ['React', 'Javascript', 'Tailwind'],
     liveUrl: 'https://viviantangdev.netlify.app/',
     githubUrl: 'https://github.com/viviantangdev/portfolio',
-    image: test2Image,
+    // image: test2Image,
   },
 ];
