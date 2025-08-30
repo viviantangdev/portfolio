@@ -5,7 +5,7 @@ import AnimationScale from './AnimationScale';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav aria-label='Main navigation' className='navbar'>
       {/*Desktop menu*/}
