@@ -1,7 +1,7 @@
 export const experiences = [
   {
     role: 'Frontend Developer',
-    company: 'Smartergy',
+    company: 'Company',
     period: '2000-2000',
     icon: (
       <svg
@@ -78,7 +78,7 @@ export const experiences = [
   },
   {
     role: 'Frontend Developer',
-    company: 'Skola',
+    company: 'School',
     period: '1900-2000',
     icon: (
       <svg

@@ -3,6 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-display: 'Oswald', sans-serif;
+
   --animate-fade-in: fade-in 1.5s linear normal forwards;
   @keyframes fade-in {
     0% {
@@ -49,7 +51,7 @@
 }
 
 body {
-  @apply m-0 px-6 max-w-screen
+  @apply font-display m-0 px-6 max-w-screen
 bg-gradient-to-br from-neutral-50 via-cyan-50 to-slate-100
 text-neutral-900 transition-all;
   @variant dark {
@@ -59,7 +61,7 @@ text-neutral-900 transition-all;
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-4xl tracking-wider;
 }
 h2 {
   @apply text-2xl;
@@ -103,7 +105,7 @@ footer {
 }
 
 .gradient-text {
-  @apply font-bold drop-shadow-lg
+  @apply tracking-wider font-bold drop-shadow-lg
        bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 
        bg-clip-text text-transparent;
   @variant dark {
@@ -179,7 +181,7 @@ footer {
 .mouse-scroll {
   @apply block w-2.5 h-2.5 m-auto
   rounded-[50%]
-  bg-gradient-to-br  from-cyan-400 via-sky-400 to-blue-500;
+  bg-gradient-to-br from-cyan-400 via-sky-400 to-blue-500;
   @variant dark {
     @apply from-cyan-400 via-sky-400 to-blue-500;
   }
@@ -191,5 +193,17 @@ footer {
   bg-gradient-to-r from-cyan-500/10 via-blue-500/20 to-indigo-600/20;
   @variant dark {
     @apply from-cyan-400/20 via-sky-400/20 to-blue-500/20;
+  }
+}
+
+.scrollToTop {
+  @apply fixed bottom-6 right-6 p-3 rounded-full
+        bg-gradient-to-r from-cyan-500 to-blue-600
+        text-white shadow-lg
+        transition-all duration-500 ease-in-out 
+        hover:scale-x-110 hover:scale-y-110;
+
+  @variant dark {
+    @apply from-cyan-400 via-sky-400 to-blue-500;
   }
 }

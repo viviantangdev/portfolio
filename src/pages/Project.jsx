@@ -1,5 +1,4 @@
 import AnimationFadeIn from '../components/AnimationFadeIn';
-import AnimationScale from '../components/AnimationScale';
 import ProjectCard from '../components/ProjectCard';
 import SectionTitle from '../components/SectionTitle';
 import { projects } from '../data/projects';
@@ -12,9 +11,9 @@ const Project = () => {
       <SectionTitle title={'Projects'} />
       </AnimationFadeIn>
         <ol className='flex flex-col gap-5 '>
-        {projects.map((proj) => (
-          <AnimationFadeIn>
-            <li key={proj.key}>
+        {projects.map((proj, index) => (
+          <AnimationFadeIn key={index}>
+            <li >
               <ProjectCard
                 title={proj.title}
                 description={proj.description}

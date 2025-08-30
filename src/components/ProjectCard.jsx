@@ -17,8 +17,8 @@ const ProjectCard = ({
       <h3>{title}</h3>
       <p>{description}</p>
       <div className='flex space-x-1.5'>
-        {tags.map((tag) => (
-          <div className='tag'>
+        {tags.map((tag, index) => (
+          <div key={index} className='tag'>
             <span>{tag}</span>
           </div>
         ))}

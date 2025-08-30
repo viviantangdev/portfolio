@@ -29,8 +29,8 @@ const About = () => {
         <article className='card'>
           <h3>Technical expertise</h3>
           <ol className='flex justify-center py-4 gap-x-6 gap-y-6 flex-wrap'>
-            {techStacks.map((tech) => (
-              <AnimationScale>
+            {techStacks.map((tech, index) => (
+              <AnimationScale key={index}>
                 <li key={tech.key}>
                   <div className='flex flex-col justify-center items-center gap-2'>
                     {tech.icon}
@@ -47,9 +47,9 @@ const About = () => {
         <article>
           <h3>My journey</h3>
           <ol className='flex flex-col py-4 gap-5'>
-            {experiences.map((exp) => (
-              <AnimationFadeIn>
-                <li key={exp.key}>
+            {experiences.map((exp, index) => (
+              <AnimationFadeIn key={index}>
+                <li >
                   <ExperienseCard
                     key={exp.company}
                     role={exp.role}
