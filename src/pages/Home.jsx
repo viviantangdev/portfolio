@@ -2,7 +2,6 @@ import AnimationFadeIn from '../components/AnimationFadeIn';
 import AnimationScale from '../components/AnimationScale';
 import Navbar from '../components/Navbar';
 
-// TODO Add an animated scroll down button
 const Home = () => {
   return (
     <div id="home">

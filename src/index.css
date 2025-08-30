@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --animate-fade-in: fade-in 1.5s linear normal forwards;
   @keyframes fade-in {
@@ -133,13 +135,11 @@ footer {
   }
 }
 
-/* TODO Fix watermark */
 .watermark {
   @apply absolute w-2/5 top-0 right-0
   opacity-10 pointer-events-none;
 }
 
-/* TODO hover */
 .btn {
   @apply px-5 py-3 rounded-2xl border-2 text-neutral-900 font-medium;
   @apply hover:border-cyan-400;
@@ -152,7 +152,7 @@ footer {
   @apply px-5 py-3 rounded-2xl 
   text-neutral-100 font-medium
   bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600;
-      @apply hover:from-cyan-400 hover:via-blue-400 hover:to-indigo-500;
+  @apply hover:from-cyan-400 hover:via-blue-400 hover:to-indigo-500;
 
   @variant dark {
     @apply from-cyan-400 via-sky-400 to-blue-500;
