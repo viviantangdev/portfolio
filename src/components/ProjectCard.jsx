@@ -7,13 +7,13 @@ const ProjectCard = ({
   tags,
   liveUrl,
   GithubUrl,
-  image,
+  // image,
 }) => {
   return (
     <div className='card'>
-      <div className='-m-4 mb-4'>
+      {/* <div className='-m-4 mb-4'>
         <img src={image} alt={title} className='w-full  object-contain' />
-      </div>
+      </div> */}
       <h3>{title}</h3>
       <p>{description}</p>
       <div className='flex space-x-1.5'>

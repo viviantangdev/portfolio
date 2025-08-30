@@ -1,10 +1,19 @@
+import bgImage from '../assets/bg.jpg';
 import AnimationFadeIn from '../components/AnimationFadeIn';
 import AnimationScale from '../components/AnimationScale';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
-    <div id="home">
+    <div id='home'>
+      {/* Background */}
+      <div
+        className='absolute inset-0 bg-cover bg-center bg-fixed opacity-20 dark:opacity-100'
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
+
+      {/* Dark overlay */}
+      <div className='absolute inset-0 dark:bg-black/80' />
       <AnimationFadeIn>
         <Navbar />
       </AnimationFadeIn>
@@ -20,6 +29,8 @@ const Home = () => {
             Looking to expand my expertise in the tech realm
           </p>
         </AnimationFadeIn>
+
+        {/*Mousescroll*/}
         <AnimationScale>
           <div className='mt-25'>
             <span className='mouse-btn'>
