@@ -1,3 +1,4 @@
+import profileImg from '../assets/profile.jpeg';
 import AnimationFadeIn from '../components/AnimationFadeIn';
 import AnimationScale from '../components/AnimationScale';
 import ExperienseCard from '../components/ExperienseCard';
@@ -10,6 +11,15 @@ const About = () => {
     <section id='about'>
       <AnimationFadeIn>
         <SectionTitle title={'About me'} />
+      </AnimationFadeIn>
+      <AnimationFadeIn>
+        <div>
+          <img
+            src={profileImg}
+            alt='Profile picture'
+            className='w-50 h-50 rounded-full object-cover shadow-md m-3'
+          />
+        </div>
       </AnimationFadeIn>
       <AnimationFadeIn>
         <div className='space-y-3'>
@@ -49,7 +59,7 @@ const About = () => {
           <ol className='flex flex-col py-4 gap-5'>
             {experiences.map((exp, index) => (
               <AnimationFadeIn key={index}>
-                <li >
+                <li>
                   <ExperienseCard
                     key={exp.company}
                     role={exp.role}
