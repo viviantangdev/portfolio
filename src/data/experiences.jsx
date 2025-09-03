@@ -1,8 +1,8 @@
 export const experiences = [
   {
     role: 'Frontend Developer',
-    company: 'Company',
-    period: '2000-2000',
+    company: 'Smartergy',
+    period: '2022-2025',
     icon: (
       <svg
         className='watermark'
@@ -73,13 +73,21 @@ export const experiences = [
         ></path>
       </svg>
     ),
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut aut, nobis, velit id dolor sunt non exercitationem minima sint mollitia, eaque ex optio. Iusto officiis quisquam illo atque eum!',
+    description: `During my time as a consultant at Smartergy, I developed a client-facing web application using Flutter and Dart. My focus was on building and designing a responsive and user-friendly interface that aligned with the client’s requirements and created a seamless user experience. This project not only strengthened my technical expertise in Flutter for web development but also sharpened my ability to turn client needs into practical, high-quality solutions.`,
+
+    tags: [
+      'Startup',
+      'Flutter',
+      'Dart',
+      'Swagger',
+      'UX/UI design',
+      'Web development',
+    ],
   },
   {
     role: 'Frontend Developer',
-    company: 'School',
-    period: '1900-2000',
+    company: 'Jensens yrkeshögskola',
+    period: '2021-2023',
     icon: (
       <svg
         className='watermark'
@@ -129,6 +137,17 @@ export const experiences = [
       </svg>
     ),
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut aut, nobis, velit id dolor sunt non exercitationem minima sint mollitia, eaque ex optio. Iusto officiis quisquam illo atque eum!',
+      'During my time at Jensens, I completed a vocational program focused on modern web development and programming. I gained hands-on experience with JavaScript, React.js, Express.js, MongoDB, HTML5, CSS, and responsive web design, and learned to manage projects effectively using Git and version control workflows. My studies also emphasized UX design and creating user-friendly web applications, including working with JSON for data handling and integrating APIs. This program provided a solid foundation in both frontend and backend development, preparing me to build functional, maintainable, and visually engaging web applications.',
+    tags: [
+      'React',
+      'Javascript',
+      'Express',
+      'MongoDB',
+      'Jest',
+      'HTML/CSS',
+      'UX/UI design',
+      'API integration',
+      'Web development',
+    ],
   },
 ];

@@ -67,6 +67,7 @@ const About = () => {
                     period={exp.period}
                     icon={exp.icon}
                     description={exp.description}
+                    tags={exp.tags}
                   />
                 </li>
               </AnimationFadeIn>
