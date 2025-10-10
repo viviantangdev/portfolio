@@ -4,6 +4,15 @@
 /* TODO fix image*/
 export const projects = [
   {
+    title: 'OrgaNote',
+    description:
+      'A simple and modern Notes app built with React + TypeScript that lets you create, edit, and delete notes — and organize them with tags.',
+    techStacks: ['React', 'Typescript', 'Tailwind'],
+    liveUrl: 'https://viviantangdev.github.io/organote/',
+    githubUrl: 'https://github.com/viviantangdev/organote',
+    // image: testImage,
+  },
+  {
     title: 'Pomodoro',
     description:
       'A simple and interactive Pomodoro Timer app to boost productivity using focused work intervals.',
