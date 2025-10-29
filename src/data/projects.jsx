@@ -4,6 +4,15 @@
 /* TODO fix image*/
 export const projects = [
   {
+    title: 'Movio',
+    description:
+      'A modern, user-friendly cinema management and ticket booking application that allows users to browse movies, view showtimes and book seats.',
+    techStacks: ['React', 'Typescript', 'Tailwind', 'Axios', ],
+    liveUrl: 'https://viviantangdev.github.io/movio/',
+    githubUrl: 'https://github.com/viviantangdev/movio',
+    // image: testImage,
+  },
+  {
     title: 'OrgaNote',
     description:
       'A simple and modern Notes app built with React + TypeScript that lets you create, edit, and delete notes — and organize them with tags.',

@@ -3,12 +3,11 @@ import AnimationFadeIn from '../components/AnimationFadeIn';
 import AnimationScale from '../components/AnimationScale';
 import ExperienseCard from '../components/ExperienseCard';
 import SectionTitle from '../components/SectionTitle';
-import { experiences } from '../data/experiences';
 import { techStacks } from '../data/techStacks';
 
 const About = () => {
   return (
-    <section id='about'>
+    <section id='about' className='w-[90%] md:w-[80%] 2xl:w-[50%] max-w-7xl mx-auto'>
       <AnimationFadeIn>
         <SectionTitle title={'About me'} />
       </AnimationFadeIn>
@@ -53,7 +52,7 @@ const About = () => {
         </article>
       </AnimationFadeIn>
 
-      <AnimationFadeIn>
+      {/* <AnimationFadeIn>
         <article>
           <h3>My journey</h3>
           <ol className='flex flex-col py-4 gap-5'>
@@ -74,7 +73,7 @@ const About = () => {
             ))}
           </ol>
         </article>
-      </AnimationFadeIn>
+      </AnimationFadeIn> */}
     </section>
   );
 };

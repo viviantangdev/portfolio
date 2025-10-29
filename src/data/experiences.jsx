@@ -2,7 +2,7 @@ export const experiences = [
   {
     role: 'Frontend Developer',
     company: 'Smartergy',
-    period: '2022-2025',
+    period: '2023-2025',
     icon: (
       <svg
         className='watermark'

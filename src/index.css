@@ -131,7 +131,7 @@ footer {
 
 .card {
   @apply rounded-xl p-4 border-2 border-gray-200
-  relative shadow-sm overflow-hidden max-w-[550px];
+  relative shadow-sm overflow-hidden;
   @variant dark {
     @apply border-gray-800;
   }
