@@ -1,7 +1,9 @@
-// import test2Image from '../assets/test2_image.jpg';
-// import testImage from '../assets/test_image.jpg';
 
-/* TODO fix image*/
+import movioImage from '../assets/movio.png';
+import portfolioImage from '../assets/portfolio.png';
+import pomodoroImage from '../assets/pomodoro.png';
+import organoteImage from '../assets/organote.png';
+
 export const projects = [
   {
     title: 'Movio',
@@ -10,16 +12,16 @@ export const projects = [
     techStacks: ['React', 'Typescript', 'Tailwind', 'Axios', ],
     liveUrl: 'https://viviantangdev.github.io/movio/',
     githubUrl: 'https://github.com/viviantangdev/movio',
-    // image: testImage,
+    image: movioImage,
   },
   {
     title: 'OrgaNote',
     description:
-      'A simple and modern Notes app built with React + TypeScript that lets you create, edit, and delete notes — and organize them with tags.',
-    techStacks: ['React', 'Typescript', 'Tailwind'],
+      'A simple Notes app built with React + TypeScript that lets you create, edit, and delete notes — and organize them with tags.',
+    techStacks: ['React', 'Typescript', 'Tailwind', 'Local storage'],
     liveUrl: 'https://viviantangdev.github.io/organote/',
     githubUrl: 'https://github.com/viviantangdev/organote',
-    // image: testImage,
+    image: organoteImage,
   },
   {
     title: 'Pomodoro',
@@ -28,7 +30,7 @@ export const projects = [
     techStacks: ['React', 'Javascript', 'Tailwind'],
     liveUrl: 'https://viviantangdev.github.io/pomodoro/',
     githubUrl: 'https://github.com/viviantangdev/pomodoro',
-    // image: testImage,
+    image: pomodoroImage,
   },
   {
     title: 'Portfolio',
@@ -37,6 +39,6 @@ export const projects = [
     techStacks: ['React', 'Javascript', 'Tailwind'],
     liveUrl: 'https://viviantangdev.netlify.app/',
     githubUrl: 'https://github.com/viviantangdev/portfolio',
-    // image: test2Image,
+    image: portfolioImage,
   },
 ];

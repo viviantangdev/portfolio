@@ -1,9 +1,11 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --transition-smooth: all 0.5s ease-in-out;
 
   --animate-fade-in: fade-in 1.5s linear normal forwards;
   @keyframes fade-in {
@@ -45,15 +47,17 @@
     }
   }
 }
-
+@utility transition-smooth {
+  transition: var(--transition-smooth);
+}
 * {
   @apply box-border scroll-smooth;
 }
 
 body {
-  @apply font-display m-0 px-6 max-w-screen
+  @apply scroll-smooth font-body m-0 px-6 max-w-screen
 bg-gradient-to-br from-neutral-50 via-cyan-50 to-slate-100
-text-neutral-900 transition-all;
+text-neutral-900;
   @variant dark {
     @apply from-neutral-950 via-slate-900 to-neutral-950  
     text-neutral-100;
@@ -107,7 +111,7 @@ footer {
 .gradient-text {
   @apply tracking-wider font-bold drop-shadow-lg
        bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 
-       bg-clip-text text-transparent;
+       bg-clip-text text-transparent transition-smooth;
   @variant dark {
     @apply from-cyan-400 via-sky-400 to-blue-500;
   }
@@ -129,6 +133,13 @@ footer {
   }
 }
 
+.projectCard {
+  @apply bg-white rounded-xl shadow-sm overflow-hidden
+   md:h-[550px];
+  @variant dark {
+    @apply bg-zinc-950;
+  }
+}
 .card {
   @apply rounded-xl p-4 border-2 border-gray-200
   relative shadow-sm overflow-hidden;
@@ -143,22 +154,31 @@ footer {
 }
 
 .btn {
-  @apply px-5 py-3 rounded-2xl border-2 text-neutral-900 font-medium;
-  @apply hover:border-cyan-400;
+  @apply px-5 py-3 rounded-2xl border-1 text-neutral-900 font-medium shadow-md transition-smooth;
+  &:hover {
+    @apply shadow-lg border-cyan-400 scale-[1.02];
+  }
   @variant dark {
     @apply text-neutral-100;
-    @apply hover:border-cyan-400;
+    &:hover {
+      @apply shadow-lg border-cyan-400 scale-[1.02];
+    }
   }
 }
 .gradient-btn {
-  @apply px-5 py-3 rounded-2xl 
-  text-neutral-100 font-medium
-  bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600;
-  @apply hover:from-cyan-400 hover:via-blue-400 hover:to-indigo-500;
+  @apply px-5 py-3 rounded-2xl text-neutral-100 font-medium
+    bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600
+    transition-smooth shadow-md;
+
+  &:hover {
+    @apply shadow-lg from-cyan-400 via-blue-400 to-indigo-500 scale-[1.02];
+  }
 
   @variant dark {
     @apply from-cyan-400 via-sky-400 to-blue-500;
-    @apply hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-600;
+    &:hover {
+      @apply shadow-lg from-cyan-500 via-blue-500 to-indigo-600 scale-[1.02];
+    }
   }
 }
 

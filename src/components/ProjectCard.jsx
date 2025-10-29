@@ -1,5 +1,4 @@
-import { FaGithub } from 'react-icons/fa6';
-import { TfiNewWindow } from 'react-icons/tfi';
+import { FaGithub, FaGlobe } from 'react-icons/fa6';
 
 const ProjectCard = ({
   title,
@@ -7,43 +6,47 @@ const ProjectCard = ({
   tags,
   liveUrl,
   GithubUrl,
-  // image,
+  image,
 }) => {
   return (
-    <div className='card'>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <div className='flex space-x-1.5 py-3'>
-        {tags.map((tag, index) => (
-          <div key={index} className='tag'>
-            <span>{tag}</span>
+    <div className='projectCard'>
+      <img src={image} alt={title} className='h-50 w-full object-cover' />
+      <div className='p-5 flex flex-col justify-between md:h-[350px]'>
+        <div className='h-full'>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <div className='flex flex-wrap overflow-auto gap-1.5 py-5'>
+            {tags.map((tag, index) => (
+              <div key={index} className='tag'>
+                <span>{tag}</span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-
-      <div className='flex flex-col gap-3 pt-4'>
-        <a
-          href={liveUrl}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='gradient-btn flex-wrap-reverse'
-        >
-          <div className='flex justify-center items-center space-x-2'>
-            <span>Live demo</span>
-            <TfiNewWindow size={23} />
-          </div>
-        </a>
-        <a
-          href={GithubUrl}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='btn'
-        >
-          <div className='flex justify-center items-center space-x-2'>
-            <span>Source code</span>
-            <FaGithub size={25} />
-          </div>
-        </a>
+        </div>
+        <div className='flex items-center gap-3'>
+          <a
+            href={liveUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='gradient-btn flex justify-center items-center w-full'
+          >
+            <div className='flex justify-center items-center space-x-2'>
+              <span>Live</span>
+              <FaGlobe size={25} />
+            </div>
+          </a>
+          <a
+            href={GithubUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn flex justify-center items-center w-full'
+          >
+            <div className='flex justify-center items-center space-x-2'>
+              <span>Code</span>
+              <FaGithub size={25} />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );

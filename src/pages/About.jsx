@@ -27,15 +27,17 @@ const About = () => {
             and interactive applications that looks appealing and enjoyable for
             people to use.
           </p>
+          <p>The unique combination of creativity, logic, technology and never running out of new things to discover, drives my excitement and passion for web development.</p>
           <p>
             I´m curious and excited to learn new things - wheater its mastering
             frameworks, programm languages or finding cleaner ways to code.
+            
           </p>
         </div>
       </AnimationFadeIn>
 
       <AnimationFadeIn>
-        <article className='card'>
+        <article>
           <h3>Technical expertise</h3>
           <ol className='flex justify-center py-4 gap-x-6 gap-y-6 flex-wrap'>
             {techStacks.map((tech, index) => (
