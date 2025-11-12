@@ -3,8 +3,18 @@ import movioImage from '../assets/movio.png';
 import portfolioImage from '../assets/portfolio.png';
 import pomodoroImage from '../assets/pomodoro.png';
 import organoteImage from '../assets/organote.png';
+import projectboardImage from '../assets/projectboard.png';
 
 export const projects = [
+  {
+    title: 'ProjectBoard',
+    description:
+      'A moderna and minimal task management board, where you can organize your projects, tesks and crate notes all in one place.',
+    techStacks: ['React', 'Typescript', 'Tailwind', 'Local storage', ],
+    liveUrl: 'https://viviantangdev.github.io/projectboard/',
+    githubUrl: 'https://github.com/viviantangdev/projectboard',
+    image: projectboardImage,
+  },
   {
     title: 'Movio',
     description:
