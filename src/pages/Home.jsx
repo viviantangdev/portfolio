@@ -1,6 +1,4 @@
 import bgImage from '../assets/bg.jpg';
-import AnimationFadeIn from '../components/AnimationFadeIn';
-import AnimationScale from '../components/AnimationScale';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
@@ -14,30 +12,28 @@ const Home = () => {
 
       {/* Background overlay */}
       <div className='absolute inset-0 dark:bg-black/80' />
-      <AnimationFadeIn>
-        <Navbar />
-      </AnimationFadeIn>
+      <Navbar />
       <section className='h-svh justify-center'>
-        <AnimationFadeIn>
+        <div
+          data-aos='fade-up'
+          data-aos-duration='3000'
+          className='flex flex-col items-center'
+        >
           <h1 className='gradient-text p-4'>Vivian tang</h1>
-        </AnimationFadeIn>
-        <AnimationFadeIn>
           <span className='text-2xl font-extralight'>Frontend Developer</span>
-        </AnimationFadeIn>
-        <AnimationFadeIn>
           <p className='secondary-paragraph p-2 text-center'>
-            Looking to expand my expertise in the tech realm
+            Looking for new opportunities where I can ship beautiful,
+            high-impact frontend work. Let’s build something awesome together!{' '}
           </p>
-        </AnimationFadeIn>
+        </div>
 
         {/*Mousescroll*/}
-        <AnimationScale>
-          <div className='mt-25'>
-            <span className='mouse-btn'>
-              <span className='mouse-scroll animate-scrolling'></span>
-            </span>
-          </div>
-        </AnimationScale>
+
+        <div data-aos='zoom-in' data-aos-duration='3000' className='mt-25'>
+          <span className='mouse-btn'>
+            <span className='mouse-scroll animate-scrolling'></span>
+          </span>
+        </div>
       </section>
     </div>
   );

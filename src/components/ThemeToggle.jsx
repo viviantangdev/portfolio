@@ -18,7 +18,7 @@ const ThemeToggle = () => {
     <button
       type='button'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className='gradient-btn'
+      className='gradient-btn cursor-pointer'
     >
       {theme === 'dark' ? <IoSunnyOutline /> : <IoMoonOutline />}
     </button>

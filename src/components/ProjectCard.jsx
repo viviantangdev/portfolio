@@ -9,7 +9,7 @@ const ProjectCard = ({
   image,
 }) => {
   return (
-    <div className='projectCard'>
+    <div data-aos='fade-up' data-aos-duration='1000' className='projectCard'>
       <img src={image} alt={title} className='h-50 w-full object-cover' />
       <div className='p-5 flex flex-col justify-between md:h-[350px]'>
         <div className='h-full'>

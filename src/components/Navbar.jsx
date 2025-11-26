@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { navigation } from '../data/navigation';
-import AnimationScale from './AnimationScale';
 import ThemeToggle from './ThemeToggle';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav aria-label='Main navigation' className='navbar'>
+    <nav
+      data-aos='zoom-in'
+      data-aos-duration='3000'
+      aria-label='Main navigation'
+      className='navbar'
+    >
       {/*Desktop menu*/}
       <div className='hidden sm:flex justify-between items-center'>
         {/*Logo*/}
@@ -47,21 +51,18 @@ const Navbar = () => {
         {isOpen && (
           <ol className='mt-4 space-y-2 '>
             {navigation.map((nav, index) => (
-              <AnimationScale key={index}>
-                <li  className='text-center gradient-btn'>
-                  <a
-                    href={nav.link}
-                    onClick={() => setIsOpen(!isOpen)}
-                    className=''
-                  >
-                    {nav.title}
-                  </a>
-                </li>
-              </AnimationScale>
+              <li key={index} className='text-center gradient-btn'>
+                <a
+                  href={nav.link}
+                  onClick={() => setIsOpen(!isOpen)}
+                  className=''
+                >
+                  {nav.title}
+                </a>
+              </li>
             ))}
-            <AnimationScale>
-              <ThemeToggle />
-            </AnimationScale>
+
+            <ThemeToggle />
           </ol>
         )}
       </div>
