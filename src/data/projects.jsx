@@ -4,8 +4,18 @@ import portfolioImage from '../assets/portfolio.png';
 import pomodoroImage from '../assets/pomodoro.png';
 import organoteImage from '../assets/organote.png';
 import projectboardImage from '../assets/projectboard.png';
+import nextshop from '../assets/nextshop.png';
 
 export const projects = [
+  {
+    title: 'NextShop',
+    description:
+      'A moderna and responsive e-commerce shop, where you can browser products, search for items, add products to cart and save favorites.',
+    techStacks: ['NextJs', 'Typescript', 'Tailwind', 'Local storage', 'Thirdpart-Api' ],
+    liveUrl: 'https://next-shop-viviantangdev-viviantangdev.vercel.app/',
+    githubUrl: 'https://github.com/viviantangdev/next-shop',
+    image: nextshop,
+  },
   {
     title: 'ProjectBoard',
     description:
