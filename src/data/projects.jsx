@@ -5,6 +5,7 @@ import pomodoroImage from '../assets/pomodoro.png';
 import organoteImage from '../assets/organote.png';
 import projectboardImage from '../assets/projectboard.png';
 import nextshop from '../assets/nextshop.png';
+import financeflow from '../assets/financeflow.png';
 
 export const projects = [
   {
@@ -15,6 +16,15 @@ export const projects = [
     liveUrl: 'https://next-shop-viviantangdev-viviantangdev.vercel.app/',
     githubUrl: 'https://github.com/viviantangdev/next-shop',
     image: nextshop,
+  },
+  {
+    title: 'FinanceFlow',
+    description:
+      'A personal financial tracker',
+    techStacks: ['React', 'Typescript', 'Tailwind', 'Local storage' ],
+    liveUrl: 'https://financeflow-viviantangdev.vercel.app/',
+    githubUrl: 'https://github.com/viviantangdev/financeflow',
+    image: financeflow,
   },
   {
     title: 'ProjectBoard',
