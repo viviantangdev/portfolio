@@ -6,8 +6,18 @@ import organoteImage from '../assets/organote.png';
 import projectboardImage from '../assets/projectboard.png';
 import nextshop from '../assets/nextshop.png';
 import financeflow from '../assets/financeflow.png';
+import todo from '../assets/todo.png';
 
 export const projects = [
+  {
+    title: 'Todo',
+    description:
+      'Personal todo application.',
+    techStacks: ['NextJs', 'Typescript', 'Tailwind', 'Local storage' ],
+    liveUrl: 'https://todo-viviantangdev.vercel.app/',
+    githubUrl: 'https://github.com/viviantangdev/todo',
+    image: todo,
+  },
   {
     title: 'NextShop',
     description:
